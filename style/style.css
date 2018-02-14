@@ -1,0 +1,20 @@
+.page-container {
+  position: relative;
+  max-width: 1024px; }
+  .page-container .header {
+    position: relative;
+    font-size: 1.5em;
+    padding: 10px; }
+    .page-container .header + .author-tag {
+      position: absolute;
+      right: 0;
+      top: 0; }
+      .page-container .header + .author-tag span {
+        display: block;
+        font-size: 0.8em; }
+  .page-container .entry-container {
+    padding: 10px;
+    border: solid 1px #d8d8d8;
+    border-radius: 2.5px; }
+
+/*# sourceMappingURL=style.css.map */
