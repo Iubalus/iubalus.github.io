@@ -1,19 +1,26 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <script type="application/javascript" src="scripts/jquery-3.3.1.min.js"></script>
+    <script type="application/javascript" src="scripts/script.js"></script>
 </head>
 <body>
-<div class="page-container">
-    <div class="header">Example Header</div>
-    <div class="author-tag">
-        <span>First M. Last</span>
-        <span>Title</span>
-        <span>13 Feb. 2018</span>
-    </div>
-    <div class="entry-container">
-        Some placeholder text
+<div class="page">
+    <div data-tabbed-content>
+        <ul class="tabs">
+            <li data-tab="tab1" class="active tab">Tab 1</li>
+            <li data-tab="tab2" class="tab">Tab 2</li>
+        </ul>
+        <div class="active-tab-content">
+            <div data-tab-content="tab1" class="tab-content active">
+                Tab 1 content
+            </div>
+            <div data-tab-content="tab2" class="tab-content">
+                Tab 2 content
+            </div>
+        </div>
     </div>
 </div>
 </body>

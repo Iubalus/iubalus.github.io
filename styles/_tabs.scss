@@ -1,0 +1,34 @@
+@import "colors";
+
+.tabs{
+    padding: 0 0 29px 0;
+    margin:0;
+    width:100%;
+    .tab{
+        float:left;
+        background:$inactive;
+        display:inline;
+        padding: 5px 60px;
+        border:solid 1px $border;
+        &:hover{
+            cursor:pointer;
+        }
+        &.active{
+            background:white;
+            padding-bottom:6px;
+            border-bottom:none;
+        }
+    }
+}
+.active-tab-content{
+    display:block;
+    border:1px solid $border;
+    .tab-content{
+        width:100%;
+        padding:10px;
+        display:none;
+        &.active{
+            display:block;
+        }
+    }
+}
