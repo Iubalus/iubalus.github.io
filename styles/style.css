@@ -3,10 +3,11 @@
   margin: 0;
   width: 100%; }
   .tabs .tab {
+    color: #793939;
     float: left;
     background: #e0e0e0;
     display: inline;
-    padding: 5px 60px;
+    padding: 5px 10px;
     border: solid 1px #adadad; }
     .tabs .tab:hover {
       cursor: pointer; }
@@ -14,6 +15,8 @@
       background: white;
       padding-bottom: 6px;
       border-bottom: none; }
+    .tabs .tab span {
+      padding-left: 10px; }
 
 .active-tab-content {
   display: block;
@@ -27,5 +30,21 @@
 
 .page {
   max-width: 1200px; }
+  .page > h2 {
+    padding: 5px 10px;
+    margin: 0; }
+  .page .ramble {
+    font-size: 0.8em;
+    display: inline-block;
+    padding-bottom: 2px; }
+    .page .ramble .ramble {
+      font-size: 0.8em; }
+      .page .ramble .ramble .ramble {
+        font-size: 0.8em; }
+        .page .ramble .ramble .ramble .ramble {
+          font-size: 0.8em; }
+  .page .social {
+    color: inherit;
+    text-decoration: none; }
 
 /*# sourceMappingURL=style.css.map */

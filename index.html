@@ -3,23 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="styles/style.css">
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
     <script type="application/javascript" src="scripts/jquery-3.3.1.min.js"></script>
     <script type="application/javascript" src="scripts/script.js"></script>
 </head>
 <body>
 <div class="page">
-    <h2>Welcome to Jubal's Page. Sorry about the mess. I'm currently trying to cook something up.</h2>
+    <h2>Welcome to Jubal's Home</h2>
+    <span class="ramble">I mean... of course it's not literal my home. <span class="ramble">That would be ridiculous. I mean. I'm not even hosting this <span class="ramble">right now. What am I gonna do? Live in GitHub? <span class="ramble">That doesn't even make sense</span></span></span></span>
     <div data-tabbed-content>
         <ul class="tabs">
-            <li data-tab="tab1" class="active tab">Tab 1</li>
-            <li data-tab="tab2" class="tab">Tab 2</li>
+            <li data-tab="dev-blog" class="active tab"><i class="fas fa-book"></i><span>Developer Blog</span></li>
+            <li data-tab="funny" class="tab"><i class="fas fa-cogs"></i><span>Misc</span></li>
+            <li data-tab="about" class="tab"><i class="fas fa-coffee"></i><span>About</span></li>
         </ul>
         <div class="active-tab-content">
-            <div data-tab-content="tab1" class="tab-content active">
-                Tab 1 content
+            <div data-tab-content="dev-blog" class="tab-content active">
+                Developer Blog Content Goes Here
             </div>
-            <div data-tab-content="tab2" class="tab-content">
-                Tab 2 content
+            <div data-tab-content="funny" class="tab-content">
+                The subtle "t" in subtlety is less subtle than the "t" in tsunami.
+            </div>
+            <div data-tab-content="about" class="tab-content">
+                <a class="social fab fa-linkedin" href="https://www.linkedin.com/in/jubal-rife-1346a990" target="_blank"
+                   title="Jubal's Linkedin"> </a>
             </div>
         </div>
     </div>

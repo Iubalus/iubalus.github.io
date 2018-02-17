@@ -5,10 +5,11 @@
     margin:0;
     width:100%;
     .tab{
+        color:$tab-color;
         float:left;
         background:$inactive;
         display:inline;
-        padding: 5px 60px;
+        padding: 5px 10px;
         border:solid 1px $border;
         &:hover{
             cursor:pointer;
@@ -17,6 +18,9 @@
             background:white;
             padding-bottom:6px;
             border-bottom:none;
+        }
+        span{
+            padding-left:10px;
         }
     }
 }

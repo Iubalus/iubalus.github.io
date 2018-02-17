@@ -2,4 +2,26 @@
 
 .page{
     max-width:1200px;
+    > h2{
+        padding:5px 10px;
+        margin:0;
+    }
+    .ramble{
+        font-size:0.8em;
+        display: inline-block;
+        padding-bottom: 2px;
+        .ramble{
+            font-size:0.8em;
+            .ramble{
+                font-size:0.8em;
+                .ramble{
+                    font-size:0.8em;
+                }
+            }
+        }
+    }
+    .social{
+        color:inherit;
+        text-decoration:none;
+    }
 }
