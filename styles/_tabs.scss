@@ -21,6 +21,7 @@
             background:white;
             padding-bottom:6px;
             border-bottom:none;
+            color:darken($tab-color, 15%);
         }
         span{
             padding-left:10px;
@@ -33,6 +34,8 @@
         overflow:auto;
         padding:10px;
         display:none;
+        min-height:600px;
+        background:white;
         &.active{
             display:block;
         }
