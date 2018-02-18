@@ -34,14 +34,23 @@
 .page {
   max-width: 1200px; }
   .page > h2 {
-    padding: 5px 10px;
-    margin: 0; }
+    padding: 10px;
+    margin: 0;
+    font-weight: 400; }
   .page .ramble {
     font-size: 0.8em;
     display: inline-block;
     padding-bottom: 2px; }
   .page .social {
     color: inherit;
-    text-decoration: none; }
+    text-decoration: none;
+    padding: 0 2px; }
+  .page .footnote {
+    padding: 10px;
+    font-size: 0.8em;
+    font-style: italic;
+    float: right; }
+  .page .check-it-out {
+    display: block; }
 
 /*# sourceMappingURL=style.css.map */

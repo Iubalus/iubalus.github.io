@@ -3,8 +3,9 @@
 .page{
     max-width:1200px;
     > h2{
-        padding:5px 10px;
-        margin:0;
+        padding: 10px;
+        margin: 0;
+        font-weight: 400;
     }
     .ramble{
         font-size:0.8em;
@@ -14,5 +15,15 @@
     .social{
         color:inherit;
         text-decoration:none;
+        padding:0 2px;
+    }
+    .footnote{
+        padding:10px;
+        font-size:0.8em;
+        font-style:italic;
+        float:right;
+    }
+    .check-it-out{
+        display:block;
     }
 }
