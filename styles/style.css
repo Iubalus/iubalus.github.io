@@ -9,6 +9,10 @@
     display: inline;
     padding: 5px 10px;
     border: solid 1px #adadad; }
+    .tabs .tab ::-moz-selection {
+      background: transparent; }
+    .tabs .tab ::selection {
+      background: transparent; }
     .tabs .tab:hover {
       cursor: pointer; }
     .tabs .tab.active {
@@ -19,10 +23,9 @@
       padding-left: 10px; }
 
 .active-tab-content {
-  display: block;
   border: 1px solid #adadad; }
   .active-tab-content .tab-content {
-    width: 100%;
+    overflow: auto;
     padding: 10px;
     display: none; }
     .active-tab-content .tab-content.active {
@@ -37,12 +40,6 @@
     font-size: 0.8em;
     display: inline-block;
     padding-bottom: 2px; }
-    .page .ramble .ramble {
-      font-size: 0.8em; }
-      .page .ramble .ramble .ramble {
-        font-size: 0.8em; }
-        .page .ramble .ramble .ramble .ramble {
-          font-size: 0.8em; }
   .page .social {
     color: inherit;
     text-decoration: none; }

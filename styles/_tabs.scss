@@ -5,12 +5,15 @@
     margin:0;
     width:100%;
     .tab{
+
         color:$tab-color;
         float:left;
         background:$inactive;
         display:inline;
         padding: 5px 10px;
         border:solid 1px $border;
+        ::-moz-selection { background: transparent; }
+        ::selection { background: transparent; }
         &:hover{
             cursor:pointer;
         }
@@ -25,10 +28,9 @@
     }
 }
 .active-tab-content{
-    display:block;
     border:1px solid $border;
     .tab-content{
-        width:100%;
+        overflow:auto;
         padding:10px;
         display:none;
         &.active{
