@@ -59,12 +59,5 @@ body {
     float: right; }
   .page .check-it-out {
     display: block; }
-  .page .blog-content {
-    overflow-x: hidden;
-    overflow-y: scroll;
-    border: none;
-    border-bottom: 1px solid #adadad;
-    height: 590px;
-    width: 100%; }
 
 /*# sourceMappingURL=style.css.map */
