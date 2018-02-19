@@ -2,10 +2,10 @@
 
 .tabs{
     padding: 0 0 29px 0;
+    border-bottom:solid 1px $border;
     margin:0;
     width:100%;
     .tab{
-
         color:$tab-color;
         float:left;
         background:$inactive;
@@ -19,8 +19,7 @@
         }
         &.active{
             background:white;
-            padding-bottom:6px;
-            border-bottom:none;
+            border-bottom:solid 1px white;
             color:darken($tab-color, 15%);
         }
         span{
@@ -30,6 +29,7 @@
 }
 .active-tab-content{
     border:1px solid $border;
+    border-top:none;
     .tab-content{
         overflow-x:hidden;
         overflow-y:auto;

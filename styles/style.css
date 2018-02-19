@@ -1,5 +1,6 @@
 .tabs {
   padding: 0 0 29px 0;
+  border-bottom: solid 1px #adadad;
   margin: 0;
   width: 100%; }
   .tabs .tab {
@@ -17,14 +18,14 @@
       cursor: pointer; }
     .tabs .tab.active {
       background: white;
-      padding-bottom: 6px;
-      border-bottom: none;
+      border-bottom: solid 1px white;
       color: #313d50; }
     .tabs .tab span {
       padding-left: 10px; }
 
 .active-tab-content {
-  border: 1px solid #adadad; }
+  border: 1px solid #adadad;
+  border-top: none; }
   .active-tab-content .tab-content {
     overflow-x: hidden;
     overflow-y: auto;
@@ -87,9 +88,5 @@ body {
     float: right; }
   .page .check-it-out {
     display: block; }
-
-@media only screen and (max-width: 500px) {
-  body {
-    background: orange; } }
 
 /*# sourceMappingURL=style.css.map */
