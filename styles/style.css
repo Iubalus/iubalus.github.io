@@ -50,12 +50,13 @@ body {
       top: 0;
       height: 100px; }
     .page .welcome span {
+      font-style: italic;
       position: absolute;
       top: 13px;
       left: 110px;
       font-size: 2em;
       position: relative;
-      background: #c7c7c7;
+      background: #d6d6d6;
       border-radius: .4em;
       padding: 10px; }
       .page .welcome span:after {
@@ -66,7 +67,7 @@ body {
         width: 0px;
         height: 0;
         border: 15px solid transparent;
-        border-right-color: #c7c7c7;
+        border-right-color: #d6d6d6;
         border-left: 0;
         border-bottom: 0;
         margin-top: -3px;
@@ -86,5 +87,9 @@ body {
     float: right; }
   .page .check-it-out {
     display: block; }
+
+@media only screen and (max-width: 500px) {
+  body {
+    background: orange; } }
 
 /*# sourceMappingURL=style.css.map */

@@ -12,8 +12,9 @@
             top:0;
             height:100px;
         }
-        $bubble-color:#c7c7c7;
+        $bubble-color:#d6d6d6;
         span {
+            font-style:italic;
             position:absolute;
             top:13px;
             left:110px;
@@ -57,5 +58,11 @@
     }
     .check-it-out{
         display:block;
+    }
+}
+
+@media only screen and (max-width:500px){
+    body{
+        background:orange;
     }
 }
