@@ -1,44 +1,48 @@
 @import "colors";
-
-.tabs{
-    padding: 0 0 29px 0;
-    border-bottom:solid 1px $border;
-    margin:0;
-    width:100%;
-    .tab{
-        color:$tab-color;
-        float:left;
-        background:$inactive;
-        display:inline;
-        padding: 5px 10px;
-        border:solid 1px $border;
-        ::-moz-selection { background: transparent; }
-        ::selection { background: transparent; }
-        &:hover{
-            cursor:pointer;
-        }
-        &.active{
-            background:white;
-            border-bottom:solid 1px white;
-            color:darken($tab-color, 15%);
-        }
-        span{
-            padding-left:10px;
+.tab-wrap{
+    border-left:1px solid $border;
+    .tabs{
+        padding: 0 0 29px 0;
+        border-bottom:solid 1px $border;
+        margin:0;
+        width:100%;
+        .tab{
+            color:$tab-color;
+            float:left;
+            background:$inactive;
+            display:inline;
+            padding: 5px 10px;
+            border:solid 1px $border;
+            border-left:none;
+            ::-moz-selection { background: transparent; }
+            ::selection { background: transparent; }
+            &:hover{
+                cursor:pointer;
+            }
+            &.active{
+                background:white;
+                border-bottom:solid 1px white;
+                color:darken($tab-color, 15%);
+            }
+            span{
+                padding-left:10px;
+            }
         }
     }
-}
-.active-tab-content{
-    border:1px solid $border;
-    border-top:none;
-    .tab-content{
-        overflow-x:hidden;
-        overflow-y:auto;
-        padding:10px;
-        display:none;
-        min-height:600px;
-        background:white;
-        &.active{
-            display:block;
+    .active-tab-content{
+        border:1px solid $border;
+        border-left:1px solid white;
+        border-top:1px solid white;
+        .tab-content{
+            overflow-x:hidden;
+            overflow-y:auto;
+            padding:10px;
+            display:none;
+            min-height:600px;
+            background:white;
+            &.active{
+                display:block;
+            }
         }
     }
 }
