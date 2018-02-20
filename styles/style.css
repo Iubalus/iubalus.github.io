@@ -44,6 +44,8 @@ body {
 
 .page {
   max-width: 1090px; }
+  .page .hidden {
+    display: none !important; }
   .page .welcome {
     position: relative;
     height: 100px;

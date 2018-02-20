@@ -2,6 +2,9 @@
 
 .page{
     max-width:1090px;
+    .hidden{
+        display:none !important;
+    }
     .welcome{
         position:relative;
         height:100px;
