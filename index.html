@@ -23,14 +23,26 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
     </script>
 
 </head>
 <body>
 <div class="page">
-    <div class="welcome">
-        <img src="icon.svg" type="image/svg+xml">
-        <span>Welcome!</span>
+    <div class="bar">
+        <div class="welcome">
+            <img src="icon.svg" type="image/svg+xml">
+            <span data-quip-anchor></span>
+        </div>
     </div>
     <div data-tabbed-content class="tab-wrap">
         <ul class="tabs">
@@ -41,7 +53,7 @@
         </ul>
         <div class="active-tab-content">
             <div data-tab-content="dev-blog" class="tab-content active">
-                <iframe style="overflow-x:hidden;overflow-y:scroll;border:none;border-bottom:1px solid black; height:590px;width:100%;"
+                <iframe style="overflow-x:hidden;overflow-y:scroll;border:none;border-bottom:1px solid black;height:590px;width:100%;"
                         src="https://docs.google.com/document/d/e/2PACX-1vTb9EnQAyva4to_AfeJAQj1UEuJDjmMTotCn3BugVr43p80zXeDbbjIBhBJuz1a1ok099RrjOzSx2-X/pub?embedded=true"></iframe>
             </div>
             <div data-tab-content="about" class="tab-content">
@@ -53,22 +65,29 @@
                         src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/477779040&color=%23dcd4d0&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
             </div>
             <div data-tab-content="resources" class="tab-content">
-                <ul class="social-links">
-                    <li><a href="https://www.linkedin.com/in/jubal-rife-1346a990/" target="_blank">LinkedIn</a></li>
-                    <li><a href="https://github.com/Iubalus" target="_blank">GitHub</a></li>
-                    <li><a href="https://twitter.com/JubalRife" target="_blank">Twitter</a></li>
-                    <li><a href="https://store.cdbaby.com/Artist/BreakfastTea" target="_blank">CD Baby (Breakfast Tea)</a></li>
-                    <li><a href="https://soundcloud.com/user-373522736" target="_blank">SoundCloud (Breakfast Tea)</a></li>
+                <ul>
+                    <li><a href="https://pages.github.com/" target="_blank">GitHub Pages</a> - What this site is. You can make one too!</li>
+                    <li><a href="https://inkscape.org/en/release/0.92.3/" target="_blank">Inkscape</a> - A free SVG editing software I used to make my logo</li>
+                    <li><a href="https://fontawesome.com/" target="_blank">Font Awesome</a> - A great free resource for nice looking fonts</li>
+                    <li><a href="https://soundcloud.com/" target="_blank">SoundCloud</a> - A great free or paid service for hosting or listening to music</li>
                 </ul>
             </div>
         </div>
     </div>
-    <span class="footnote">Special thanks to
-        <a href="https://github.com/" target="_blank">GitHub Pages</a>,
-        <a href="https://drive.google.com" target="_blank">Google Drive</a>, and
-        <a href="https://fontawesome.com/" target="_blank">FontAwesome</a> for providing free services to make this page possible.
-        If you, kind reader, find an error in my writing or just have some stuff to say, email <a href="mailto:me@jubalrife.com">me</a>. I'm open for suggestions too.
-    </span>
+    <div class="bar">
+    <span class="footnote">Special thanks to GitHub Pages, Google Drive, and Font Awesome for providing free tools/services to make this page possible.</span>
+        <div class="social-wrap">
+            <div class="social">
+                <a target="_blank" href="https://twitter.com/JubalRife"><i class="fab fa-twitter"></i>Twitter</a>
+            </div>
+            <div class="social">
+                <a target="_blank" href="https://github.com/Iubalus"><i class="fab fa-github"></i>GitHub</a>
+            </div>
+            <div class="social">
+                <a target="_blank" href="https://soundcloud.com/user-373522736"><i class="fab fa-soundcloud"></i>SoundCloud</a>
+            </div>
+        </div>
+    </div>
 </div>
 </body>
 </html>

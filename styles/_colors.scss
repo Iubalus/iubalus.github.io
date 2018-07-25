@@ -1,4 +1,7 @@
-$inactive:#e0e0e0;
-$border: darken($inactive, 20%);
-$tab-color: #4e6180;
-$body: #f1f1f1;
+$theme: #847486;
+$inactive:#cdcdcd;
+$border: darken($inactive, 25%);
+$tab-color: darken($theme, 40%);
+$body: $theme;
+$bubble-color:lighten($theme, 25%);
+$social: #78f178;
