@@ -28,7 +28,8 @@
   padding: 30px 10px;
   border: 1px solid #8d8d8d;
   border-left: 1px solid white;
-  border-top: 1px solid white; }
+  border-top: 1px solid white;
+  border-radius: 0 5px 5px 0; }
   .tab-wrap .active-tab-content .tab-content {
     overflow-x: hidden;
     overflow-y: auto;
@@ -88,6 +89,12 @@ body {
   font-size: 0.8em;
   font-style: italic;
   color: white; }
+.page .control-table {
+  width: 100%; }
+  .page .control-table td + td {
+    padding-left: 10px; }
+.page .twitter-feed {
+  padding-top: 35px; }
 .page .social-wrap {
   margin-top: 25px;
   width: 100%; }

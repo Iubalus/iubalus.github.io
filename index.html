@@ -10,31 +10,11 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114372317-1"></script>
     <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-114372317-1');
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-114372317-1');
     </script>
-
 </head>
 <body>
 <div class="page">
@@ -44,38 +24,61 @@
             <span data-quip-anchor></span>
         </div>
     </div>
-    <div data-tabbed-content class="tab-wrap">
-        <ul class="tabs">
-            <li data-tab="dev-blog" class="active tab"><i class="fas fa-book"></i><span>Developer Blog</span></li>
-            <li data-tab="about" class="tab"><i class="fas fa-coffee"></i><span>About</span></li>
-            <li data-tab="music" class="tab"><i class="fas fa-music"></i><span>Music</span></li>
-            <li data-tab="resources" class="tab"><i class="fas fa-cogs"></i><span>Resources</span></li>
-        </ul>
-        <div class="active-tab-content">
-            <div data-tab-content="dev-blog" class="tab-content active">
-                <iframe style="overflow-x:hidden;overflow-y:scroll;border:none;border-bottom:1px solid black;height:590px;width:100%;"
-                        src="https://docs.google.com/document/d/e/2PACX-1vTb9EnQAyva4to_AfeJAQj1UEuJDjmMTotCn3BugVr43p80zXeDbbjIBhBJuz1a1ok099RrjOzSx2-X/pub?embedded=true"></iframe>
-            </div>
-            <div data-tab-content="about" class="tab-content">
-                <iframe style="overflow-x:hidden;overflow-y:scroll;border:none;border-bottom:1px solid black; height:590px;width:100%;"
-                        src="https://docs.google.com/document/d/e/2PACX-1vR69C_O4KTFnSuUa0y1XtQOgIKAjXWoIpGoi6gUkGg7Y9Ml2ahdecm4dVH0F0zwo0YCfgfUO7j_OR_P/pub?embedded=true"></iframe>
-            </div>
-            <div data-tab-content="music" class="tab-content">
-                <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay"
-                        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/477779040&color=%23dcd4d0&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
-            </div>
-            <div data-tab-content="resources" class="tab-content">
-                <ul>
-                    <li><a href="https://pages.github.com/" target="_blank">GitHub Pages</a> - What this site is. You can make one too!</li>
-                    <li><a href="https://inkscape.org/en/release/0.92.3/" target="_blank">Inkscape</a> - A free SVG editing software I used to make my logo</li>
-                    <li><a href="https://fontawesome.com/" target="_blank">Font Awesome</a> - A great free resource for nice looking fonts</li>
-                    <li><a href="https://soundcloud.com/" target="_blank">SoundCloud</a> - A great free or paid service for hosting or listening to music</li>
-                </ul>
-            </div>
-        </div>
-    </div>
+    <table class="control-table">
+        <tbody>
+        <tr>
+            <td width="80%">
+                <div data-tabbed-content class="tab-wrap">
+                    <ul class="tabs">
+                        <li data-tab="dev-blog" class="active tab"><i
+                                class="fas fa-book"></i><span>Developer Blog</span></li>
+                        <li data-tab="about" class="tab"><i class="fas fa-coffee"></i><span>About</span></li>
+                        <li data-tab="music" class="tab"><i class="fas fa-music"></i><span>Music</span></li>
+                        <li data-tab="resources" class="tab"><i class="fas fa-cogs"></i><span>Resources</span></li>
+                    </ul>
+                    <div class="active-tab-content">
+                        <div data-tab-content="dev-blog" class="tab-content active">
+                            <iframe style="overflow-x:hidden;overflow-y:scroll;border:none;border-bottom:1px solid black;height:590px;width:100%;"
+                                    src="https://docs.google.com/document/d/e/2PACX-1vTb9EnQAyva4to_AfeJAQj1UEuJDjmMTotCn3BugVr43p80zXeDbbjIBhBJuz1a1ok099RrjOzSx2-X/pub?embedded=true"></iframe>
+                        </div>
+                        <div data-tab-content="about" class="tab-content">
+                            <iframe style="overflow-x:hidden;overflow-y:scroll;border:none;border-bottom:1px solid black; height:590px;width:100%;"
+                                    src="https://docs.google.com/document/d/e/2PACX-1vR69C_O4KTFnSuUa0y1XtQOgIKAjXWoIpGoi6gUkGg7Y9Ml2ahdecm4dVH0F0zwo0YCfgfUO7j_OR_P/pub?embedded=true"></iframe>
+                        </div>
+                        <div data-tab-content="music" class="tab-content" id="music-tab-content"></div>
+                        <div data-tab-content="resources" class="tab-content">
+                            <ul>
+                                <li><a href="https://pages.github.com/" target="_blank">GitHub Pages</a> - What this
+                                    site is. You
+                                    can make one too!
+                                </li>
+                                <li><a href="https://inkscape.org/en/release/0.92.3/" target="_blank">Inkscape</a> - A
+                                    free SVG
+                                    editing software I used to make my logo
+                                </li>
+                                <li><a href="https://fontawesome.com/" target="_blank">Font Awesome</a> - A great free
+                                    resource for
+                                    nice looking fonts
+                                </li>
+                                <li><a href="https://soundcloud.com/" target="_blank">SoundCloud</a> - A great free or
+                                    paid service
+                                    for hosting or listening to music
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </td>
+            <td width="20%" valign="top" class="twitter-feed">
+                <a class="twitter-timeline" href="https://twitter.com/JubalRife?ref_src=twsrc%5Etfw">Tweets by
+                    JubalRife</a>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </td>
+        </tr>
+        </tbody>
+    </table>
     <div class="bar">
-    <span class="footnote">Special thanks to GitHub Pages, Google Drive, and Font Awesome for providing free tools/services to make this page possible.</span>
+        <span class="footnote">Special thanks to GitHub Pages, Google Drive, and Font Awesome for providing free tools/services to make this page possible.</span>
         <div class="social-wrap">
             <div class="social">
                 <a target="_blank" href="https://twitter.com/JubalRife"><i class="fab fa-twitter"></i>Twitter</a>
