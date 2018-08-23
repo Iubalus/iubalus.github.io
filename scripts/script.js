@@ -6,7 +6,7 @@ $(function(){
             'Gee, You found my site. Neat!',
             'Got questions or comments? Tweet me. It\'s a ghost town over there',
             'Did you know GitHub lets you host a blog for free? Neato!',
-            'Did you know the Developer Blog is a google doc? That might be a problem later...',
+            'I re-skinned and abandoned the google doc, but I need to make a thing to generate the html for me.',
             'Don\'t expect too much from my page. It\'s all kinda taped together right now...',
             'I think this new site look is pretty spiffy!',
             '90% Widgets 10% probably other stuff I guess.',
