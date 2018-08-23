@@ -110,5 +110,47 @@ body {
       .page .social-wrap .social a i {
         padding-right: 5px;
         color: #78f178; }
+.page .entry {
+  font-size: 1.05em; }
+  .page .entry > .topic {
+    display: block;
+    font-weight: normal;
+    font-size: 1.3em;
+    padding: 10px 0;
+    border-radius: 5px;
+    background: #c0b8c2;
+    margin: 0; }
+    .page .entry > .topic span:not(.publish-meta) {
+      padding: 10px 5px;
+      margin-right: 10px;
+      background: #ccc6cd;
+      border-radius: 5px 0 0 5px;
+      border-right: 1px solid white; }
+    .page .entry > .topic .publish-meta {
+      float: right;
+      font-style: italic;
+      padding-right: 10px;
+      font-size: 0.7em; }
+  .page .entry input[type="checkbox"] {
+    position: absolute;
+    left: -9999px; }
+  .page .entry input:checked ~ .entry-content {
+    display: none; }
+  .page .entry .entry-content {
+    padding: 10px; }
+    .page .entry .entry-content h4 {
+      font-size: 1.1em;
+      color: #1a1a1a;
+      font-weight: normal; }
+    .page .entry .entry-content h5 {
+      padding-left: 10px;
+      font-weight: normal; }
+    .page .entry .entry-content p {
+      margin: 10px 0;
+      padding: 0 10px; }
+    .page .entry .entry-content .quote {
+      font-style: italic;
+      padding: 5px 0 5px 40px;
+      margin: 0px; }
 
 /*# sourceMappingURL=style.css.map */

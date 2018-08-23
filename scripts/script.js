@@ -34,4 +34,6 @@ $(function(){
             target.find("[data-tab-content]").toggleClass("active", false);
             target.find("[data-tab-content='"+ clicked.data("tab")+"']").toggleClass("active", true);
         });
+
+        $('[data-tab-content="dev-blog"]').html($("#blog-content").remove())
 });
