@@ -11,7 +11,8 @@ $(function(){
             'I think this new site look is pretty spiffy!',
             '90% Widgets 10% probably other stuff I guess.',
             'Follow me on Twitter over there to the right... I\'ll say stuff like \"Check out my site\"...',
-            'Do you like the purple? I like the purple. Some people haven\'t been too keen on it.'
+            'Do you like the purple? I like the purple. Some people haven\'t been too keen on it.',
+            'If I\'ve written something questionable, feel free to tweet me about it: Typos ttoo.'
         ];
         var anchor = $("[data-quip-anchor]")
         function pickQuip(){

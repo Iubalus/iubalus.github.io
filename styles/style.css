@@ -148,6 +148,9 @@ body {
     .page .entry .entry-content p {
       margin: 10px 0;
       padding: 0 10px; }
+    .page .entry .entry-content li p {
+      margin: 10px 0;
+      padding: 0; }
     .page .entry .entry-content .quote {
       font-style: italic;
       padding: 5px 0 5px 40px;
