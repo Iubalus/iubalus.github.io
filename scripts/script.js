@@ -12,7 +12,8 @@ $(function(){
             '90% Widgets 10% probably other stuff I guess.',
             'Follow me on Twitter over there to the right... I\'ll say stuff like \"Check out my site\"...',
             'Do you like the purple? I like the purple. Some people haven\'t been too keen on it.',
-            'If I\'ve written something questionable, feel free to tweet me about it: Typos ttoo.'
+            'If I\'ve written something questionable, feel free to tweet me about it: Typos ttoo.',
+            'I don\'t have a subscriber count here, but I do have Google Analytics... It tells me I visit my site a lot...'
         ];
         var anchor = $("[data-quip-anchor]")
         function pickQuip(){
