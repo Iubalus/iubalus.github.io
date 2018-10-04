@@ -38,4 +38,7 @@ $(function(){
         });
 
         $('[data-tab-content="dev-blog"]').html($("#blog-content").remove())
+        $("body").on("click", ".line-overlay", function(){
+            $("[data-command-in]").focus();
+        })
 });

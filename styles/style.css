@@ -41,6 +41,71 @@
     .tab-wrap .active-tab-content .tab-content.active {
       display: block; }
 
+.console {
+  border: 2px solid #8d8d8d;
+  font: 1.1rem Inconsolata, monospace;
+  text-shadow: 0 0 5px #ecfdec;
+  color: #16d416;
+  border-radius: 25px;
+  position: relative;
+  background-color: black;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  -webkit-animation-name: console-text-anim;
+  -webkit-animation-duration: 0.04s;
+  animation-name: console-text-anim;
+  animation-duration: 0.04s;
+  animation-iteration-count: infinite; }
+  .console .line-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15) 1px, transparent 1px, transparent 2px); }
+  .console .console-text {
+    display: block;
+    padding: 2rem; }
+@-webkit-keyframes console-text-anim {
+  0% {
+    color: #16d416;
+    background-image: radial-gradient(#084908, black 120%); }
+  50% {
+    color: #11a511;
+    background-image: radial-gradient(#074407, black 120%); }
+  100% {
+    color: #16d416;
+    background-image: radial-gradient(#084908, black 120%); } }
+@keyframes console-text-anim {
+  0% {
+    color: #16d416;
+    background-image: radial-gradient(#084908, black 120%); }
+  50% {
+    color: #11a511;
+    background-image: radial-gradient(#074407, black 120%); }
+  100% {
+    color: #16d416;
+    background-image: radial-gradient(#084908, black 120%); } }
+  .console::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none; }
+  .console ::selection {
+    background: #0080FF;
+    text-shadow: none; }
+  .console pre {
+    margin: 0; }
+  .console .blinky-boi {
+    animation: blink-cursor 1s step-start infinite; }
+@keyframes blink-cursor {
+  50% {
+    opacity: 0; } }
+  .console .command-in:focus {
+    outline: none; }
+
 body {
   background: #c6c7cb; }
 
