@@ -4,7 +4,14 @@
     .bar{
         min-height:186px;
         padding:10px;
-        background:$theme;
+        background: $theme;
+        margin-bottom:0px;
+        margin-top:10px;
+        border-radius:2.5px;
+        &:first-of-type{
+            margin-bottom:10px;
+            margin-top:0px;
+        }
     }
     .hidden{
         display:none !important;
@@ -23,6 +30,7 @@
             border-radius:100px;
         }
         span {
+            font-family:monospace;
             font-style:italic;
             position:absolute;
             top:115px;
@@ -94,6 +102,7 @@
             border-radius:5px;
             background: $bubble-color;
             margin:0;
+            font-family:monospace;
             span:not(.publish-meta){
                 padding:10px 5px;
                 margin-right:10px;

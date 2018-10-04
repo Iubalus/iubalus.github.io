@@ -2,6 +2,6 @@
 @import "tabs";
 
 body{
-    background: $body;
+    background: lighten($theme, 25%);
 }
 
