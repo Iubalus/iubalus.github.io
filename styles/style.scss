@@ -1,6 +1,7 @@
 @import "common";
 
 .page{
+	min-width:800px;
     .bar{
         min-height:186px;
         padding:10px;
@@ -72,6 +73,16 @@
     .twitter-feed{
         padding-top:35px;
     }
+	@media only screen and (max-width: 1000px) {
+		.twitter-feed {
+			display: none;
+		}
+		.welcome {
+			span{
+				display: none;			
+			}
+		}
+	}
     .social-wrap{
         margin-top:25px;
         width:100%;
@@ -125,7 +136,8 @@
             display:none;
         }
         .entry-content{
-            padding:10px;
+            padding:10px 1in;
+			line-height: 1.5;
             h4{
                 font-size:1.1em;
                 color:lighten(black, 10%);
