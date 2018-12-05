@@ -2,6 +2,10 @@
 
 .page{
 	min-width:800px;
+	.offscreen{
+		position:absolute;
+		left:-1000px;
+	}
     .bar{
         min-height:186px;
         padding:10px;

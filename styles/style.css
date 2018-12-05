@@ -61,10 +61,12 @@
   height: 100vh;
   margin: 0;
   overflow: hidden;
+  background: #063b06;
+  background-image: radial-gradient(#084908, black 120%);
   -webkit-animation-name: console-text-anim;
-  -webkit-animation-duration: 0.04s;
+  -webkit-animation-duration: 0.08s;
   animation-name: console-text-anim;
-  animation-duration: 0.04s;
+  animation-duration: 0.08s;
   animation-iteration-count: infinite;
 }
 .console .line-overlay {
@@ -77,32 +79,30 @@
   display: block;
   padding: 2rem;
 }
+.console .offscreen {
+  position: absolute;
+  top: -1000px;
+}
 @-webkit-keyframes console-text-anim {
   0% {
     color: #16d416;
-    background-image: radial-gradient(#084908, black 120%);
   }
   50% {
     color: #11a511;
-    background-image: radial-gradient(#074407, black 120%);
   }
   100% {
     color: #16d416;
-    background-image: radial-gradient(#084908, black 120%);
   }
 }
 @keyframes console-text-anim {
   0% {
     color: #16d416;
-    background-image: radial-gradient(#084908, black 120%);
   }
   50% {
     color: #11a511;
-    background-image: radial-gradient(#074407, black 120%);
   }
   100% {
     color: #16d416;
-    background-image: radial-gradient(#084908, black 120%);
   }
 }
 .console::after {
@@ -139,6 +139,10 @@ body {
 
 .page {
   min-width: 800px;
+}
+.page .offscreen {
+  position: absolute;
+  left: -1000px;
 }
 .page .bar {
   min-height: 186px;
