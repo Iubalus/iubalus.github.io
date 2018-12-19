@@ -28,6 +28,11 @@ $(function(){
             $("[data-tab='music']").toggleClass("loaded", true);
         })
 
+		$("body").on("click", "[data-blog-entry]", function(){
+			var clicked = $(this);
+			$("[data-active-blog-entry]").load(clicked.data("blog-entry"));
+		});
+		
         $("body").on("click", "[data-tab]", function(){
             var clicked = $(this);
             var target = clicked.parents("[data-tabbed-content]");
@@ -36,6 +41,4 @@ $(function(){
             target.find("[data-tab-content]").toggleClass("active", false);
             target.find("[data-tab-content='"+ clicked.data("tab")+"']").toggleClass("active", true);
         });
-
-        $('[data-tab-content="dev-blog"]').html($("#blog-content").remove())
 });
