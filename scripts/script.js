@@ -32,6 +32,7 @@ $(function(){
 			var clicked = $(this);
 			$("[data-active-blog-entry]").load(clicked.data("blog-entry"));
 		});
+		$("body").find("[data-blog-entry]").first().click();
 		
         $("body").on("click", "[data-tab]", function(){
             var clicked = $(this);
