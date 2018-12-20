@@ -245,18 +245,15 @@ body {
   color: #78f178;
 }
 .page .blog-listing {
-  color: blue;
-  margin-top: 10px;
-  border-top: 1px solid black;
-  padding-top: 10px;
+  color: #486bc9;
+  padding: 5px 10px;
 }
 .page .blog-listing:hover {
   cursor: pointer;
+  background: #eeeeef;
 }
 .page .blog-listing:first-of-type {
-  padding-top: 0px;
   margin-top: 0px;
-  border-top: none;
 }
 .page .blog-listing .publish-date {
   padding-right: 20px;
@@ -264,6 +261,7 @@ body {
   font-style: italic;
 }
 .page .entry {
+  margin-top: 5px;
   font-size: 1.05em;
 }
 .page .entry > .topic {
