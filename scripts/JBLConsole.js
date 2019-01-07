@@ -196,4 +196,6 @@ $(function(){
 		    }
 
 		}
+
+        $("[data-console-focus]").focus();
 });

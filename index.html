@@ -2,12 +2,11 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" type="image/png" href="icon.png">
+    <link rel="icon" type="image/png" href="image/icon.png">
     <link rel="stylesheet" href="styles/style.css">
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
     <script type="application/javascript" src="scripts/jquery-3.3.1.min.js"></script>
     <script type="application/javascript" src="scripts/script.js"></script>
-    <script type="application/javascript" src="scripts/JBLConsole.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114372317-1"></script>
     <script>
@@ -90,13 +89,18 @@
 
 
 
+
+
+
+
+
     </script>
 </head>
 <body>
 <div class="page">
     <div class="bar">
         <div class="welcome">
-            <img src="icon.svg" type="image/svg+xml">
+            <img src="image/icon.svg" type="image/svg+xml">
             <span data-quip-anchor></span>
         </div>
     </div>
@@ -111,23 +115,29 @@
                         <li data-tab="about" class="tab"><i class="fas fa-coffee"></i><span>About</span></li>
                         <li data-tab="music" class="tab"><i class="fas fa-music"></i><span>Music</span></li>
                         <li data-tab="resources" class="tab"><i class="fas fa-cogs"></i><span>Resources</span></li>
-                        <li data-tab="console" class="tab"><i class="fas fa-terminal"></i><span>Console</span></li>
+                        <li data-open-console class="tab"><i class="fas fa-terminal"></i><span>Console</span></li>
                     </ul>
                     <div class="active-tab-content">
                         <div data-tab-content="dev-blog" class="tab-content active">
-                            <div class="blog-listing" data-blog-entry="blogs/entry3.html">
-                                <span class="publish-date">2018.09.10</span>
-                                Topic 3 - Coding Healthy
-                            </div>
-                            <div class="blog-listing" data-blog-entry="blogs/entry2.html">
-                                <span class="publish-date">2018.07.08</span>
-                                Topic 2 - Recovering From Mistakes
-                            </div>
-                            <div class="blog-listing" data-blog-entry="blogs/entry1.html">
-                                <span class="publish-date">2018.03.17</span>
-                                Topic 1 - Condition Engine
-                            </div>
-                            <div data-active-blog-entry></div>
+                            <ul class="blog-index">
+                                <li>
+                                    <a href="20180910.html" target="_blank">
+                                        <span class="publish-date">2018.09.10</span>
+                                        Topic 3 - Coding Healthy
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="20180708.html" target="_blank">
+                                        <span class="publish-date">2018.07.08</span>
+                                        Topic 2 - Recovering From Mistakes</a>
+                                </li>
+                                <li>
+                                    <a href="20180317.html" target="_blank">
+                                        <span class="publish-date">2018.03.17</span>
+                                        Topic 1 - Condition Engine
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
                         <div data-tab-content="about" class="tab-content">
                             <p>

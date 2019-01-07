@@ -28,12 +28,6 @@ $(function(){
             $("[data-tab='music']").toggleClass("loaded", true);
         })
 
-		$("body").on("click", "[data-blog-entry]", function(){
-			var clicked = $(this);
-			$("[data-active-blog-entry]").load(clicked.data("blog-entry"));
-		});
-		$("body").find("[data-blog-entry]").first().click();
-		
         $("body").on("click", "[data-tab]", function(){
             var clicked = $(this);
             var target = clicked.parents("[data-tabbed-content]");
@@ -41,5 +35,9 @@ $(function(){
             clicked.toggleClass("active", true);
             target.find("[data-tab-content]").toggleClass("active", false);
             target.find("[data-tab-content='"+ clicked.data("tab")+"']").toggleClass("active", true);
+        });
+
+        $("body").on("click", "[data-open-console]", function(){
+            window.open('console.html', 'Console', 'width=837,height=528');
         });
 });
