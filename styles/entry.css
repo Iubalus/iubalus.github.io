@@ -1,5 +1,5 @@
 body {
-  background: #4c5058;
+  background: #504c58;
 }
 
 .entry {
@@ -31,14 +31,14 @@ body {
 }
 .entry .topic-wrap h2 {
   padding: 10px;
-  background: #c0c3c9;
+  background: #9c97a6;
   left: 0;
   width: 20%;
   border-radius: 3px 0 0 3px;
 }
 .entry .topic-wrap h3 {
   padding: 10px;
-  background: #b3b6bd;
+  background: #8f8a9a;
   right: 0;
   width: 80%;
   border-left: 1px solid white;

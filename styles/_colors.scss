@@ -1,9 +1,9 @@
-$primary: #4c5058;
+$primary: #504c58;
 $highlight: #78f178;
 $theme: $primary;
 $inactive:#cdcdcd;
 $border: darken($inactive, 25%);
-$tab-color: darken($theme, 30%);
+$tab-color: darken($theme, 40%);
 $body: $theme;
-$bubble-color:lighten($theme, 40%);
+$bubble-color:lighten($theme, 25%);
 $social: $highlight;
