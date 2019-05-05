@@ -5,7 +5,7 @@
 .tab-wrap .tabs .tab {
   font-family: monospace;
   width: 130px;
-  color: #212224;
+  color: black;
   float: left;
   background: #cdcdcd;
   display: inline;
@@ -51,7 +51,7 @@
 }
 
 body {
-  background: #c6c7cb;
+  background: #8f8a9a;
 }
 
 .page {
@@ -64,7 +64,7 @@ body {
 .page .bar {
   min-height: 186px;
   padding: 10px;
-  background: #83868e;
+  background: #504c58;
   margin-bottom: 0px;
   margin-top: 10px;
   border-radius: 2.5px;
@@ -98,7 +98,7 @@ body {
   left: 177px;
   font-size: 1.4em;
   position: relative;
-  background: #c6c7cb;
+  background: #8f8a9a;
   border-radius: 0.4em;
   padding: 20px;
 }
@@ -110,7 +110,7 @@ body {
   width: 0px;
   height: 0;
   border: 15px solid transparent;
-  border-right-color: #c6c7cb;
+  border-right-color: #8f8a9a;
   border-left: 0;
   border-bottom: 0;
   margin-top: -3px;
@@ -216,14 +216,14 @@ body {
 }
 .page .blog-index li a {
   text-decoration: none;
-  color: #486bc9;
+  color: #422381;
 }
 .page .blog-index li a:visited {
-  color: #6a6d74;
+  color: #37343d;
 }
 .page .blog-index li:hover {
   cursor: pointer;
-  background: #eeeeef;
+  background: #b6b3bd;
 }
 .page .blog-index:first-of-type {
   margin-top: 0px;
