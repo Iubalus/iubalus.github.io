@@ -116,6 +116,54 @@ body {
   margin-top: -3px;
   margin-left: -14px;
 }
+.page .about-me {
+  max-width: 8.5in;
+  border-top: 30px solid #bbbbbb;
+  border-left: 1px solid #bbbbbb;
+  border-right: 1px solid #bbbbbb;
+  border-bottom: 1px solid #bbbbbb;
+  padding: 10px 1in 0 1in;
+}
+.page .about-me > div {
+  margin-bottom: 10px;
+}
+.page .about-me .i-am {
+  font-style: italic;
+}
+.page .about-me .tools {
+  background: #fafafa;
+  padding: 10px;
+  border: solid 1px #bbbbbb;
+  border-radius: 2.5px;
+}
+.page .about-me .tools > h4 {
+  margin: 0 0 10px 0;
+  font-weight: normal;
+  border-bottom: 1px solid #bbbbbb;
+  padding-bottom: 10px;
+}
+.page .about-me .tools .tool-breakdown h4 {
+  margin: 0;
+  font-weight: normal;
+  color: #888888;
+}
+.page .about-me .tools .tool-breakdown ul {
+  font-size: 0.8em;
+  margin: 0;
+}
+.page .about-me .personal-life {
+  margin-top: 30px;
+}
+.page .about-me .personal-life > h4 {
+  font-weight: normal;
+  margin: 0 0 10px 0;
+  padding-bottom: 10px;
+  border-bottom: solid 1px #bbbbbb;
+  color: #888888;
+}
+.page .about-me .personal-life > div {
+  margin-bottom: 10px;
+}
 .page .footnote {
   padding: 10px 5px;
   font-size: 0.8em;
