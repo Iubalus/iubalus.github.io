@@ -10,10 +10,11 @@ $(function(){
             'Don\'t expect too much from my page. It\'s all kinda taped together right now...',
             'I think this new site look is pretty spiffy!',
             '90% Widgets 10% probably other stuff I guess.',
-            'Follow me on Twitter over there to the right... I\'ll say stuff like \"Check out my site\"...',
+            'Follow me on Twitter... I\'ll say stuff like \"Check out my site\"...',
             'This used to be purple, but I got tired of that so it\'s bluish now',
             'If I\'ve written something questionable, feel free to tweet me about it: Typos ttoo.',
-            'I don\'t have a subscriber count here, but I do have Google Analytics... It tells me I visit my site a lot...'
+            'I don\'t have a subscriber count here. I used to have google analytics, but I like a bit of mystery so I got rid of that.',
+            'I\'m currently using patched together JQuery, but I\'ll probably switch to VueJS soon'
         ];
         var anchor = $("[data-quip-anchor]")
         function pickQuip(){
