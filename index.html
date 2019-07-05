@@ -8,177 +8,219 @@
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
     <script type="application/javascript" src="scripts/jquery-3.3.1.min.js"></script>
     <script type="application/javascript" src="scripts/script.js"></script>
+    <script type="application/javascript" src="scripts/vue.min.js"></script>
 </head>
 
 <body>
-<div class="page">
-    <div class="bar">
-        <div class="welcome">
-            <img src="image/icon.gif">
-            <span data-quip-anchor></span>
+    <div id="page" class="page">
+        <div class="bar">
+            <div class="welcome" v-on:click="newQuip()">
+                <img src="image/icon.gif">
+                <span>{{currentQuip}}</span>
+            </div>
         </div>
-    </div>
-    <table class="control-table">
-        <tbody>
-        <tr>
-            <td style="vertical-align:top;">
-                <div data-tabbed-content class="tab-wrap">
-                    <ul class="tabs">
-                        <li data-tab="dev-blog" class="tab"><i class="fas fa-book"></i><span>Developer
+        <table class="control-table">
+            <tbody>
+                <tr>
+                    <td style="vertical-align:top;">
+                        <div data-tabbed-content class="tab-wrap">
+                            <ul class="tabs">
+                                <li data-tab="dev-blog" class="tab"><i class="fas fa-book"></i><span>Developer
                                         Blog</span></li>
-                        <li data-tab="about" class="tab active"><i class="fas fa-coffee"></i><span>About</span></li>
-                        <li data-tab="music" class="tab"><i class="fas fa-music"></i><span>Music</span></li>
-                        <li data-tab="resources" class="tab"><i class="fas fa-cogs"></i><span>Resources</span>
-                        </li>
-                        <li data-open-console class="tab"><i class="fas fa-terminal"></i><span>Console</span>
-                        </li>
-                    </ul>
-                    <div class="active-tab-content">
-                        <div data-tab-content="dev-blog" class="tab-content">
-                            <ul class="blog-index">
-                                <li>
-                                    <a href="20180910.html" rel="noopener" target="_blank">
-                                        <span class="publish-date">2018.09.10</span>
-                                        Topic 3 - Coding Healthy
-                                    </a>
+                                <li data-tab="about" class="tab active"><i class="fas fa-coffee"></i><span>About</span>
                                 </li>
-                                <li>
-                                    <a href="20180708.html" rel="noopener" target="_blank">
-                                        <span class="publish-date">2018.07.08</span>
-                                        Topic 2 - Recovering From Mistakes</a>
+                                <li data-tab="music" class="tab"><i class="fas fa-music"></i><span>Music</span></li>
+                                <li data-tab="resources" class="tab"><i class="fas fa-cogs"></i><span>Resources</span>
                                 </li>
-                                <li>
-                                    <a href="20180317.html" rel="noopener" target="_blank">
-                                        <span class="publish-date">2018.03.17</span>
-                                        Topic 1 - Condition Engine
-                                    </a>
+                                <li data-open-console class="tab"><i class="fas fa-terminal"></i><span>Console</span>
                                 </li>
                             </ul>
-                        </div>
-                        <div data-tab-content="about" class="tab-content active">
-                            <div class="about-me">
-                                <div class="i-am">
-                                    Jubal Rife. Software Developer. Billings MT.
+                            <div class="active-tab-content">
+                                <div data-tab-content="dev-blog" class="tab-content">
+                                    <ul class="blog-index">
+                                        <li>
+                                            <a href="20180910.html" rel="noopener" target="_blank">
+                                                <span class="publish-date">2018.09.10</span>
+                                                Topic 3 - Coding Healthy
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="20180708.html" rel="noopener" target="_blank">
+                                                <span class="publish-date">2018.07.08</span>
+                                                Topic 2 - Recovering From Mistakes</a>
+                                        </li>
+                                        <li>
+                                            <a href="20180317.html" rel="noopener" target="_blank">
+                                                <span class="publish-date">2018.03.17</span>
+                                                Topic 1 - Condition Engine
+                                            </a>
+                                        </li>
+                                    </ul>
                                 </div>
-                                <div>
-                                    In 2014 I graduated from Rocky Mountain College with a Bachelor's Degree of science.
-                                    I have been working as a full-stack developer since graduation.
-                                </div>
-                                <div class="tools">
-                                    <h4>Tools, Architecture, and Languages I have been working in since graduation</h4>
-                                    <div class="tool-breakdown">
-                                        <h4>Server Side</h4>
-                                        <ul>
-                                            <li>Java</li>
-                                            <li>Microsoft TSQL</li>
-                                            <li>MySQL</li>
-                                            <li>Antlr</li>
-                                        </ul>
-                                        <h4>Client Side</h4>
-                                        <ul>
-                                            <li>HTML</li>
-                                            <li>Sass/CSS</li>
-                                            <li>javascript</li>
-                                            <li>jQuery</li>
-                                            <li>RequireJS</li>
-                                            <li>VueJS</li>
-                                        </ul>
-                                        <h4>Data Languages</h4>
-                                        <ul>
-                                            <li>XML</li>
-                                            <li>JSON</li>
-                                        </ul>
-                                        <h4>Tools</h4>
-                                        <ul>
-                                            <li>Kilimanjaro (ORM)</li>
-                                            <li>Hibernate (ORM)</li>
-                                            <li>Gradle</li>
-                                            <li>Ant (to a minimal degree)</li>
-                                            <li>Apache Tomcat</li>
-                                            <li>Netbeans IDE (until the switch to Intellij)</li>
-                                            <li>Intellij IDE</li>
-                                            <li>SQL Management Studio</li>
-                                            <li>TortoiseHG/Mercurial Version Control</li>
-                                            <li>GoCD (Go continuous delivery)</li>
-                                            <li>RabbitMQ</li>
-                                        </ul>
+                                <div data-tab-content="about" class="tab-content active">
+                                    <div class="about-me">
+                                        <div class="i-am">
+                                            Jubal Rife. Software Developer. Billings MT.
+                                        </div>
+                                        <div>
+                                            In 2014 I graduated from Rocky Mountain College with a Bachelor's Degree of
+                                            science.
+                                            I have been working as a full-stack developer since graduation.
+                                        </div>
+                                        <div class="tools">
+                                            <h4>Tools, Architecture, and Languages I have been working in since
+                                                graduation</h4>
+                                            <div class="tool-breakdown">
+                                                <h4>Server Side</h4>
+                                                <ul>
+                                                    <li>Java</li>
+                                                    <li>Microsoft TSQL</li>
+                                                    <li>MySQL</li>
+                                                    <li>Antlr</li>
+                                                </ul>
+                                                <h4>Client Side</h4>
+                                                <ul>
+                                                    <li>HTML</li>
+                                                    <li>Sass/CSS</li>
+                                                    <li>javascript</li>
+                                                    <li>jQuery</li>
+                                                    <li>RequireJS</li>
+                                                    <li>VueJS</li>
+                                                </ul>
+                                                <h4>Data Languages</h4>
+                                                <ul>
+                                                    <li>XML</li>
+                                                    <li>JSON</li>
+                                                </ul>
+                                                <h4>Tools</h4>
+                                                <ul>
+                                                    <li>Kilimanjaro (ORM)</li>
+                                                    <li>Hibernate (ORM)</li>
+                                                    <li>Gradle</li>
+                                                    <li>Ant (to a minimal degree)</li>
+                                                    <li>Apache Tomcat</li>
+                                                    <li>Netbeans IDE (until the switch to Intellij)</li>
+                                                    <li>Intellij IDE</li>
+                                                    <li>SQL Management Studio</li>
+                                                    <li>TortoiseHG/Mercurial Version Control</li>
+                                                    <li>GoCD (Go continuous delivery)</li>
+                                                    <li>RabbitMQ</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            The work I do spans the entire life-cycle of development from gathering
+                                            requirements
+                                            for features to deploying the code.
+                                        </div>
+                                        <div>
+                                            When building features, my work spans the entire stack from defining
+                                            efficient and
+                                            effective schema in the database to designing UI that is intuitive and
+                                            convenient to
+                                            use.
+                                        </div>
                                     </div>
                                 </div>
-                                <div>
-                                    The work I do spans the entire life-cycle of development from gathering requirements
-                                    for features to deploying the code.
+                                <div data-tab-content="music" class="tab-content" id="music-tab-content"></div>
+                                <div data-tab-content="resources" class="tab-content">
+                                    <ul>
+                                        <li><a href="https://pages.github.com/" target="_blank">GitHub Pages</a> - What
+                                            this
+                                            site is. You
+                                            can make one too!
+                                        </li>
+                                        <li><a href="https://inkscape.org/en/release/0.92.3/"
+                                                target="_blank">Inkscape</a> - A
+                                            free SVG
+                                            editing software I used to make my logo
+                                        </li>
+                                        <li><a href="https://fontawesome.com/" target="_blank">Font Awesome</a> - A
+                                            great free
+                                            resource for
+                                            nice looking fonts
+                                        </li>
+                                        <li><a href="https://soundcloud.com/" target="_blank">SoundCloud</a> - A great
+                                            free or
+                                            paid service
+                                            for hosting or listening to music
+                                        </li>
+                                        <li><a href="https://leaverou.github.io/bubbly/" target="_blank">Bubbly</a> - A
+                                            fun tool
+                                            I found for making speech bubbles (like the one in my banner)
+                                        </li>
+                                    </ul>
                                 </div>
-                                <div>
-                                    When building features, my work spans the entire stack from defining efficient and
-                                    effective schema in the database to designing UI that is intuitive and convenient to
-                                    use.
-                                </div>
-                            </div>
-                        </div>
-                        <div data-tab-content="music" class="tab-content" id="music-tab-content"></div>
-                        <div data-tab-content="resources" class="tab-content">
-                            <ul>
-                                <li><a href="https://pages.github.com/" target="_blank">GitHub Pages</a> - What
-                                    this
-                                    site is. You
-                                    can make one too!
-                                </li>
-                                <li><a href="https://inkscape.org/en/release/0.92.3/"
-                                       target="_blank">Inkscape</a> - A
-                                    free SVG
-                                    editing software I used to make my logo
-                                </li>
-                                <li><a href="https://fontawesome.com/" target="_blank">Font Awesome</a> - A
-                                    great free
-                                    resource for
-                                    nice looking fonts
-                                </li>
-                                <li><a href="https://soundcloud.com/" target="_blank">SoundCloud</a> - A great
-                                    free or
-                                    paid service
-                                    for hosting or listening to music
-                                </li>
-                                <li><a href="https://leaverou.github.io/bubbly/" target="_blank">Bubbly</a> - A
-                                    fun tool
-                                    I found for making speech bubbles (like the one in my banner)
-                                </li>
-                            </ul>
-                        </div>
-                        <div data-tab-content="console" class="tab-content">
-                            <div data-console class="console">
-                                <div class="line-overlay"></div>
-                                <div class="console-text">
-                                    JBLv0.8<br>
-                                    <div data-command-out></div>
-                                    <span data-command-in class="command-in"></span>
-                                    <span class="blinky-boi">&#8248;</span>
-                                    <div class="offscreen" data-console-execute-wrap></div>
+                                <div data-tab-content="console" class="tab-content">
+                                    <div data-console class="console">
+                                        <div class="line-overlay"></div>
+                                        <div class="console-text">
+                                            JBLv0.8<br>
+                                            <div data-command-out></div>
+                                            <span data-command-in class="command-in"></span>
+                                            <span class="blinky-boi">&#8248;</span>
+                                            <div class="offscreen" data-console-execute-wrap></div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </td>
-        </tr>
-        </tbody>
-    </table>
-    <div class="bar">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="bar">
             <span class="footnote">Special thanks to GitHub Pages, Google Drive, and Font Awesome for providing free
                 tools/services to make this page possible.</span>
-        <div class="social-wrap">
-            <div class="social">
-                <a target="_blank" href="https://twitter.com/JubalRife"><i class="fab fa-twitter"></i>Twitter</a>
-            </div>
-            <div class="social">
-                <a target="_blank" href="https://github.com/Iubalus"><i class="fab fa-github"></i>GitHub</a>
-            </div>
-            <div class="social">
-                <a target="_blank" href="https://soundcloud.com/user-373522736"><i
-                        class="fab fa-soundcloud"></i>SoundCloud</a>
+            <div class="social-wrap">
+                <div class="social">
+                    <a target="_blank" href="https://twitter.com/JubalRife"><i class="fab fa-twitter"></i>Twitter</a>
+                </div>
+                <div class="social">
+                    <a target="_blank" href="https://github.com/Iubalus"><i class="fab fa-github"></i>GitHub</a>
+                </div>
+                <div class="social">
+                    <a target="_blank" href="https://soundcloud.com/user-373522736"><i
+                            class="fab fa-soundcloud"></i>SoundCloud</a>
+                </div>
             </div>
         </div>
     </div>
-</div>
+    <script type="application/javascript">
+        var app = new Vue({
+            el: "#page",
+            computed: {
+                currentQuip() {
+                    return this.quips[this.quip];
+                }
+            },
+            data: {
+                quip: 0,
+                quips: [
+                    'Welcome to jubalrife.com!',
+                    'I\'m sure I\'ll think of something to write about',
+                    'Want to hear music I\'ve made? Check out the music tab',
+                    'Gee, You found my site. Neat!',
+                    'Got questions or comments? Tweet me. It\'s a ghost town over there',
+                    'Did you know GitHub lets you host a blog for free? Neato!',
+                    'I re-skinned and abandoned the google doc, but I need to make a thing to generate the html for me.',
+                    'Don\'t expect too much from my page. It\'s all kinda taped together right now...',
+                    'I think this new site look is pretty spiffy!',
+                    '90% Widgets 10% probably other stuff I guess.',
+                    'Follow me on Twitter... I\'ll say stuff like \"Check out my site\"...',
+                    'This used to be purple, but I got tired of that so it\'s bluish now',
+                    'If I\'ve written something questionable, feel free to tweet me about it: Typos ttoo.',
+                    'I don\'t have a subscriber count here. I used to have google analytics, but I like a bit of mystery so I got rid of that.',
+                    'I\'m halfway between a JQuery page and VueJS page at this point'
+                ]
+            },
+            methods: {
+                newQuip() {
+                    this.quip = Math.floor(Math.random() * this.quips.length);
+                }
+            }
+        })
+    </script>
 </body>
 
 </html>
