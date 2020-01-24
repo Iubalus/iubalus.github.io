@@ -14,27 +14,33 @@
 <body>
     <div id="page" class="page">
         <div class="bar">
-            <div class="welcome" v-on:click="newQuip()">
-                <img src="image/icon.gif">
+            <div class="welcome">
+                <img src="image/icon.gif" title="Click for new quip" v-on:click="newQuip()">
                 <span>{{currentQuip}}</span>
             </div>
         </div>
-        <table class="control-table">
+        <table class="control-table tab-wrap" data-tabs>
             <tbody>
+                <tr class="tabs">
+                    <td data-tab="dev-blog" class="tab">
+                        <i class="fas fa-book"></i>Developer Blog
+                    </td>
+                    <td data-tab="about" class="tab active">
+                        <i class="fas fa-coffee"></i>About
+                    </td>
+                    <td data-tab="music" class="tab">
+                        <i class="fas fa-music"></i>Music
+                    </td>
+                    <td data-tab="resources" class="tab">
+                        <i class="fas fa-cogs"></i>Resources
+                    </td>
+                    <td data-open-console class="tab">
+                        <i class="fas fa-terminal"></i>Console
+                    </td>
+                </tr>
                 <tr>
-                    <td style="vertical-align:top;">
+                    <td colspan="5" style="vertical-align:top;">
                         <div data-tabbed-content class="tab-wrap">
-                            <ul class="tabs">
-                                <li data-tab="dev-blog" class="tab"><i class="fas fa-book"></i><span>Developer
-                                        Blog</span></li>
-                                <li data-tab="about" class="tab active"><i class="fas fa-coffee"></i><span>About</span>
-                                </li>
-                                <li data-tab="music" class="tab"><i class="fas fa-music"></i><span>Music</span></li>
-                                <li data-tab="resources" class="tab"><i class="fas fa-cogs"></i><span>Resources</span>
-                                </li>
-                                <li data-open-console class="tab"><i class="fas fa-terminal"></i><span>Console</span>
-                                </li>
-                            </ul>
                             <div class="active-tab-content">
                                 <div data-tab-content="dev-blog" class="tab-content">
                                     <ul class="blog-index">

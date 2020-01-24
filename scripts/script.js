@@ -7,7 +7,7 @@ $(function(){
 
         $("body").on("click", "[data-tab]", function(){
             var clicked = $(this);
-            var target = clicked.parents("[data-tabbed-content]");
+            var target = clicked.parents("[data-tabs]");
             target.find("[data-tab]").toggleClass("active", false);
             clicked.toggleClass("active", true);
             target.find("[data-tab-content]").toggleClass("active", false);

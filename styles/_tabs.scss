@@ -10,25 +10,24 @@
             border-top:solid 1px $border;
             border-right:solid 1px $border;
             font-family:monospace;
-            width:150px;
+            min-width:150px;
             color:$tab-color;
-            float:left;
             background:$inactive;
-            display:inline;
             padding: 8px 10px;
             border-left:none;
             ::-moz-selection { background: transparent; }
             ::selection { background: transparent; }
             &:hover{
                 cursor:pointer;
+                background:lighten($inactive, 5%);
             }
             &.active{
                 background:white;
                 border-bottom:solid 1px white;
                 color:darken($tab-color, 15%);
             }
-            span{
-                padding-left:10px;
+            i{
+                padding-right:10px;
             }
         }
     }

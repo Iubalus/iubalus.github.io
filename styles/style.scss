@@ -30,6 +30,7 @@
         position:relative;
         height:160px;
         margin-bottom:10px;
+        
         img{
             position:absolute;
             left:10px;
@@ -37,6 +38,10 @@
             height:160px;
             padding: 10px;
             background:white;
+            &:hover{
+                cursor:pointer;
+                filter:brightness(120%);
+            }
         }
         span {
             font-family:monospace;

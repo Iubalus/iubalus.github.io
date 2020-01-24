@@ -9,11 +9,9 @@
   border-top: solid 1px #8d8d8d;
   border-right: solid 1px #8d8d8d;
   font-family: monospace;
-  width: 150px;
+  min-width: 150px;
   color: #212224;
-  float: left;
   background: #cdcdcd;
-  display: inline;
   padding: 8px 10px;
   border-left: none;
 }
@@ -25,14 +23,15 @@
 }
 .tab-wrap .tabs .tab:hover {
   cursor: pointer;
+  background: #dadada;
 }
 .tab-wrap .tabs .tab.active {
   background: white;
   border-bottom: solid 1px white;
   color: black;
 }
-.tab-wrap .tabs .tab span {
-  padding-left: 10px;
+.tab-wrap .tabs .tab i {
+  padding-right: 10px;
 }
 .tab-wrap .active-tab-content {
   background: white;
@@ -95,6 +94,10 @@ body {
   height: 160px;
   padding: 10px;
   background: white;
+}
+.page .welcome img:hover {
+  cursor: pointer;
+  filter: brightness(120%);
 }
 .page .welcome span {
   font-family: monospace;
