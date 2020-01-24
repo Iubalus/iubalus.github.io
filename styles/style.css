@@ -2,15 +2,19 @@
   padding: 0 0 29px 0;
   margin: 0 0 5px 0;
 }
+.tab-wrap .tabs .tab:first-of-type {
+  border-left: solid 1px #8d8d8d;
+}
 .tab-wrap .tabs .tab {
+  border-top: solid 1px #8d8d8d;
+  border-right: solid 1px #8d8d8d;
   font-family: monospace;
-  width: 130px;
+  width: 150px;
   color: #212224;
   float: left;
   background: #cdcdcd;
   display: inline;
   padding: 8px 10px;
-  border: solid 1px #8d8d8d;
   border-left: none;
 }
 .tab-wrap .tabs .tab ::-moz-selection {
@@ -33,10 +37,8 @@
 .tab-wrap .active-tab-content {
   background: white;
   padding: 30px 10px;
-  border: 1px solid #8d8d8d;
   border-left: 1px solid white;
   border-top: 1px solid white;
-  border-radius: 0 5px 5px 0;
 }
 .tab-wrap .active-tab-content .tab-content {
   overflow-x: hidden;
@@ -57,6 +59,12 @@ body {
 .page {
   min-width: 800px;
 }
+.page table {
+  border-spacing: 0px;
+}
+.page table td {
+  padding: 0;
+}
 .page .offscreen {
   position: absolute;
   left: -1000px;
@@ -67,7 +75,6 @@ body {
   background: #83868e;
   margin-bottom: 0px;
   margin-top: 10px;
-  border-radius: 2.5px;
 }
 .page .bar:first-of-type {
   margin-bottom: 10px;
@@ -133,7 +140,6 @@ body {
   background: #fafafa;
   padding: 10px;
   border: solid 1px #bbbbbb;
-  border-radius: 2.5px;
 }
 .page .about-me .tools > h4 {
   margin: 0 0 10px 0;

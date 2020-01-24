@@ -197,7 +197,7 @@
             data: {
                 quip: 0,
                 quips: [
-                    'Welcome to jubalrife.com!',
+                    'Welcome to jubalrife.net!',
                     'I\'m sure I\'ll think of something to write about',
                     'Want to hear music I\'ve made? Check out the music tab',
                     'Gee, You found my site. Neat!',
@@ -213,6 +213,9 @@
                     'I don\'t have a subscriber count here. I used to have google analytics, but I like a bit of mystery so I got rid of that.',
                     'I\'m halfway between a JQuery page and VueJS page at this point'
                 ]
+            },
+            created: function () {
+                this.newQuip();
             },
             methods: {
                 newQuip() {
