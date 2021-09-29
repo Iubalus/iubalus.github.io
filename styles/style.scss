@@ -72,55 +72,23 @@
         }
     }
     .about-me{
-        $bordergray: #bbbbbb;
-        $titlegray: #888888;
-        $offwhite:#fafafa;
         max-width:8.5in;
-        border-top:30px solid $bordergray;
-        border-left:1px solid $bordergray;
-        border-right:1px solid $bordergray;
-        border-bottom:1px solid $bordergray;
-        padding: 10px 1in 0 1in;
+        padding: 0.5in 1in;
+        >h1{
+            font-weight:normal;
+            font-family:monospace;
+            color:#3f3f3f;
+            border-bottom:1px solid #bbbbbb;
+            font-size:1.5em;
+            margin:0 0 10px 0;
+            padding:0 0 5px 0;
+        }
+        .disclaimer{
+            margin-top:1in;
+            font-size:0.8em;
+        }
         >div{
             margin-bottom: 10px;
-        }
-        .i-am{
-            font-style:italic;
-        }
-        .tools{
-            background: $offwhite;
-            padding: 10px;
-            border: solid 1px $bordergray;
-            > h4{
-                margin: 0 0 10px 0;
-                font-weight:normal;
-                border-bottom:1px solid $bordergray;
-                padding-bottom:10px;
-            }
-            .tool-breakdown{
-                h4{
-                    margin: 0;
-                    font-weight:normal;
-                    color:$titlegray;
-                }
-                ul{
-                    font-size:0.8em;
-                    margin: 0;
-                }
-            }
-        }
-        .personal-life{
-            margin-top:30px;
-            >h4{
-                font-weight:normal;
-                margin:0 0 10px 0;
-                padding-bottom:10px;
-                border-bottom: solid 1px $bordergray;
-                color:$titlegray;
-            }
-            >div{
-                margin-bottom:10px;
-            }            
         }
     }
     .footnote{
