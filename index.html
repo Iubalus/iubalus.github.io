@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="styles/style.css">
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
     <script type="application/javascript" src="scripts/jquery-3.3.1.min.js"></script>
-    <script type="application/javascript" src="scripts/script.js"></script>
     <script type="application/javascript" src="scripts/vue.min.js"></script>
 </head>
 
@@ -28,13 +27,13 @@
                     <td data-tab="about" class="tab active">
                         <i class="fas fa-coffee"></i>About
                     </td>
-                    <td data-tab="music" class="tab">
+                    <td id="open-music-tab" data-tab="music" class="tab">
                         <i class="fas fa-music"></i>Music
                     </td>
                     <td data-tab="resources" class="tab">
                         <i class="fas fa-cogs"></i>Resources
                     </td>
-                    <td data-open-console class="tab">
+                    <td id="open-console" data-open-console class="tab">
                         <i class="fas fa-terminal"></i>Console
                     </td>
                 </tr>
@@ -65,42 +64,65 @@
                                 </div>
                                 <div data-tab-content="about" class="tab-content active">
                                     <div class="about-me">
+                                        <div>
+                                            <h1>Reactivity Example</h1>
+                                            <input type="number"/>
+                                            <input type="button" value="Increment"/>
+                                            <input type="button" value="Decrement"/>
+                                        </div>
                                         <h1>
                                             Hello World: Welcome to my website!
-                                        </h1>  
+                                        </h1>
                                         <div>
                                             My name is Jubal Rife. I am a Software Developer in Billings Montana.
                                         </div>
                                         <div>
-                                            I graduated from Rocky Mountain College in 2014 with a Bachelor's degree of Computer Science. Shortly after graduation I began working professionally as a full-stack developer. Over the years my role has transitioned from Junior Developer, to Senior Developer, to my current position as Director of Engineering.
+                                            I graduated from Rocky Mountain College in 2014 with a Bachelor's degree of
+                                            Computer Science. Shortly after graduation I began working professionally as
+                                            a full-stack developer. Over the years my role has transitioned from Junior
+                                            Developer, to Senior Developer, to my current position as Director of
+                                            Engineering.
                                         </div>
                                         <div>
-                                            I have spent my whole professional life working in the same legacy codebase (financial technology, full-stack, over a million lines of code, 100+ microservices many of which are third-party integrations) with largely the same collegues (we're a midsized team of around 10 people. We've had very little turnover so I am working with a lot of the same collegues from years ago) 
-                                            It has been a rich learning experience as we have grown together professionally and roles have shifted over time. I feel honored to work with such excellent people.
+                                            I have spent my whole professional life working in the same legacy codebase
+                                            (financial technology, full-stack, over a million lines of code, 100+
+                                            microservices many of which are third-party integrations) with largely the
+                                            same collegues (we're a midsized team of around 10 people. We've had very
+                                            little turnover so I am working with a lot of the same collegues from years
+                                            ago)
+                                            It has been a rich learning experience as we have grown together
+                                            professionally and roles have shifted over time. I feel honored to work with
+                                            such excellent people.
                                         </div>
                                         <div>
-                                            When I'm not working on software, I like to make music, read, sketch, occasionally even do creative writing. (As well as many other less-bragworthy forms of entertainment)
+                                            When I'm not working on software, I like to make music, read, sketch,
+                                            occasionally even do creative writing. (As well as many other
+                                            less-bragworthy forms of entertainment)
                                         </div>
                                         <div>
                                             Thanks for dropping by. I hope you find something of interest here.
                                         </div>
                                         <div class="disclaimer">
-                                            Please note that this is my personal website (currently graciously hosted by Github via Github Pages) and nothing written here is on behalf of or in connection to my employer. I intend to refrain from mentioning my employer by name, endorsing products, or using my employer's branding or intellectual property in any way.
-                                        </div>                                                                                                                   
+                                            Please note that this is my personal website (currently graciously hosted by
+                                            Github via Github Pages) and nothing written here is on behalf of or in
+                                            connection to my employer. I intend to refrain from mentioning my employer
+                                            by name, endorsing products, or using my employer's branding or intellectual
+                                            property in any way.
+                                        </div>
                                     </div>
                                 </div>
                                 <div data-tab-content="music" class="tab-content" id="music-tab-content"></div>
                                 <div data-tab-content="resources" class="tab-content">
                                     <ul>
                                         <li>
-											This site is hosted through
-											<a href="https://pages.github.com/" target="_blank">GitHub Pages</a>. 
+                                            This site is hosted through
+                                            <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
                                             You can make one too!
                                         </li>
                                         <li>
-											Also check out
-											<a href="https://leaverou.github.io/bubbly/" target="_blank">Bubbly</a>
-											A fun tool for making speech bubbles (like the one in my banner)
+                                            Also check out
+                                            <a href="https://leaverou.github.io/bubbly/" target="_blank">Bubbly</a>
+                                            A fun tool for making speech bubbles (like the one in my banner)
                                         </li>
                                     </ul>
                                 </div>
@@ -177,6 +199,7 @@
             }
         })
     </script>
+    <script type="application/javascript" src="scripts/script.js"></script>
 </body>
 
 </html>
