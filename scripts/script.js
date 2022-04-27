@@ -6,7 +6,6 @@
         window.open('console.html', 'Console', 'width=837,height=528');
     });
     document.getElementById("open-music-tab").addEventListener("click", () => {
-        console.log("open tab clicked")
         if (!state.musicOpened) {
             state.musicOpened = true;
             document.getElementById("music-tab-content").innerHTML = '<iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/477779040&color=%23dcd4d0&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>';
