@@ -1,6 +1,21 @@
-<script setup la
-  components: { Tab },ng="ts">
+<script lang="ts">
 import Tab from './Tab.vue';
+import TabGroup from './TabGroup.vue';
+export default {
+  name: "HomePage",
+  components: { Tab, TabGroup },
+  data() {
+    return {
+      tabs: [
+        { icon:"fas fa-book", slotName: "blog", contentLabel: "blog.tab" },
+        { icon:"fas fa-coffee", slotName: "about", contentLabel: "about.tab", active:true },
+        { icon:"fas fa-music", slotName: "music", contentLabel: "music.tab" },
+        { icon:"fas fa-cogs", slotName: "resources", contentLabel: "resources.tab" },
+        { icon:"fas fa-terminal", slotName: "console", contentLabel: "console.tab" }
+      ]
+    }
+  }
+}
 </script>
 <template>
   <div class="page">
@@ -14,6 +29,13 @@ import Tab from './Tab.vue';
         <span class="disclaimer">{{ $t("about.disclaimer") }}</span>
       </div>
     </tab>
+    <tab-group v-model:tabs="tabs">
+      <template v-slot:blog>Blog Content Here</template>
+      <template v-slot:about>About Content Here</template>
+      <template v-slot:music>Music Content Here</template>
+      <template v-slot:resources>Resources Content Here</template>
+      <template v-slot:console>Console Content Here</template>
+    </tab-group>
   </div>
 </template>
 <style lang="scss" scoped>

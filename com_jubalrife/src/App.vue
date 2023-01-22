@@ -1,10 +1,15 @@
-<script setup lang="ts">
+<script lang="ts">
 import HomePage from './components/HomePage.vue'
+export default {
+  name: "App",
+  components: { HomePage }
+}
 </script>
 
 <template>
-  <HomePage/>
+  <HomePage />
 </template>
 
 <style scoped>
+
 </style>

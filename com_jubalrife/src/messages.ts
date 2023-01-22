@@ -1,7 +1,7 @@
 const messages = {
     en: {
         about: {
-            h: "About",
+            tab: "About",
             h1: "Hello World: Welcome to my website!",
             p: [
                 "My name is Jubal Rife. I am a Software Developer in Billings Montana.",
@@ -10,6 +10,18 @@ const messages = {
                 "Thanks for dropping by. I hope you find something of interest here."
             ],
             disclaimer: "Please note that this is my personal website (currently graciously hosted by Github via Github Pages) and nothing written here is on behalf of or in connection to my employer."
+        },
+        blog: {
+            tab: "Blog"
+        },
+        music: {
+            tab: "Music"
+        },
+        resources: {
+            tab: "Resources"
+        },
+        console: {
+            tab: "Console"
         }
     }
 }
