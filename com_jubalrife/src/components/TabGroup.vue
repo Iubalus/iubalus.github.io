@@ -4,7 +4,8 @@ declare interface Tab {
     slotName: string,
     contentLabel: string,
     icon: string,
-    active?: boolean
+    active?: boolean,
+    action?: Function
 }
 import { PropType, getCurrentInstance } from 'vue';
 
@@ -19,8 +20,10 @@ export default {
     },
     methods: {
         setActive(tab: Tab) {
-            this.tabs.forEach(t => t.active = false)
-            tab.active = true;
+            if (!tab.action || (tab.action && tab.action())) {
+                this.tabs.forEach(t => t.active = false)
+                tab.active = true;
+            }
             (getCurrentInstance()?.proxy as any).$emit("update:tabs", this.tabs);
         }
     }
@@ -36,7 +39,7 @@ export default {
             </div>
         </div>
         <div v-for="tab in tabs" :key="tab.contentLabel">
-            <div v-if="tab.active" class="tab-content">
+            <div v-show="tab.active" class="tab-content">
                 <slot :name="tab.slotName"></slot>
             </div>
         </div>

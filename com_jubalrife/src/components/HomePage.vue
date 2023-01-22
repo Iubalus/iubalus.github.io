@@ -5,6 +5,10 @@ export default {
   components: { TabGroup },
   data() {
     return {
+      musicTab: {
+        loaded: false,
+        html: ""
+      },
       tabs: [
         {
           icon: "fas fa-book",
@@ -20,7 +24,11 @@ export default {
         {
           icon: "fas fa-music",
           slotName: "music",
-          contentLabel: "music.tab"
+          contentLabel: "music.tab",
+          action: () => {
+            this.loadMusic();
+            return true;
+          }
         },
         {
           icon: "fas fa-cogs",
@@ -30,9 +38,18 @@ export default {
         {
           icon: "fas fa-terminal",
           slotName: "console",
-          contentLabel: "console.tab"
+          contentLabel: "console.tab",
+          action: () => { window.open('/console/console.html', 'Console', 'width=837,height=528'); return false; }
         }
       ]
+    }
+  },
+  methods: {
+    loadMusic() {
+      if (!this.musicTab.loaded) {
+        this.musicTab.loaded = true;
+        this.musicTab.html = '<iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/477779040&color=%23dcd4d0&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>';
+      }
     }
   }
 }
@@ -46,7 +63,27 @@ export default {
       </div>
     </div>
     <tab-group v-model:tabs="tabs">
-      <template v-slot:blog>Blog Content Here</template>
+      <template v-slot:blog>
+        <ul class="blog-index">
+          <li>
+            <a href="/blogposts/20180910.html" rel="noopener" target="_blank">
+              <span class="publish-date">2018.09.10</span>
+              Topic 3 - Coding Healthy
+            </a>
+          </li>
+          <li>
+            <a href="/blogposts/20180708.html" rel="noopener" target="_blank">
+              <span class="publish-date">2018.07.08</span>
+              Topic 2 - Recovering From Mistakes</a>
+          </li>
+          <li>
+            <a href="/blogposts/20180317.html" rel="noopener" target="_blank">
+              <span class="publish-date">2018.03.17</span>
+              Topic 1 - Condition Engine
+            </a>
+          </li>
+        </ul>
+      </template>
       <template v-slot:about>
         <div class="about-me">
           <h1>{{ $t("about.h1") }}</h1>
@@ -57,7 +94,9 @@ export default {
           <span class="disclaimer">{{ $t("about.disclaimer") }}</span>
         </div>
       </template>
-      <template v-slot:music>Music Content Here</template>
+      <template v-slot:music>
+        <div v-if="musicTab.loaded" v-html="musicTab.html" />
+      </template>
       <template v-slot:resources>
         <ul>
           <li>
@@ -74,9 +113,14 @@ export default {
             </a>
             {{ $t('resources.r2.p2') }}
           </li>
+          <li>
+            {{ $t('resources.r3.p1') }}
+            <a href="https://css-tricks.com/old-timey-terminal-styling/">{{ $t('resources.r3.link') }}</a>
+            {{ $t('resources.r3.p2') }}
+          </li>
         </ul>
       </template>
-      <template v-slot:console>Console Content Here</template>
+      <template v-slot:console></template>
     </tab-group>
     <div class="bar">
       <span class="footnote">{{ $t('specialThanks') }}</span>

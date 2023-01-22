@@ -29,12 +29,17 @@ const messages = {
             r1: {
                 p1: "This site is hosted through",
                 link: "GitHub Pages",
-                p2: ". You can make one too!"
+                p2: "You can make one too!"
             },
             r2: {
                 p1: "Also check out",
                 link: "Bubbly",
-                p2: ". A fun tool for making speech bubbles (like the one in my banner)"
+                p2: "A fun tool for making speech bubbles (like the one in my banner)"
+            },
+            r3: {
+                p1: "Useful guide for making old console css",
+                link: "Old Timey Terminal Styling",
+                p2: ""
             }
         },
         console: {
