@@ -1,0 +1,16 @@
+const messages = {
+    en: {
+        about: {
+            h: "About",
+            h1: "Hello World: Welcome to my website!",
+            p: [
+                "My name is Jubal Rife. I am a Software Developer in Billings Montana.",
+                "I graduated from Rocky Mountain College in 2014 with a Bachelor's degree of Computer Science. I have been working as a full-stack developer since then.",
+                "When I'm not working on software, I like to make music, read, sketch, occasionally even do creative writing. (As well as many other less-bragworthy forms of entertainment)",
+                "Thanks for dropping by. I hope you find something of interest here."
+            ],
+            disclaimer: "Please note that this is my personal website (currently graciously hosted by Github via Github Pages) and nothing written here is on behalf of or in connection to my employer."
+        }
+    }
+}
+export { messages }
