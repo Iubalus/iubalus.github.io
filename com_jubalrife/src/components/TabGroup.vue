@@ -27,11 +27,73 @@ export default {
 }
 </script>
 <template>
-    <div v-for="tab in tabs" :key="tab.contentLabel">
-        <div @click="setActive(tab)"><font-awesome-icon :icon="tab.icon" /> {{ $t(tab.contentLabel) }}</div>
-        <slot v-if="tab.active" :name="tab.slotName"></slot>
+    <div>
+        <div v-for="tab in tabs" :key="tab.contentLabel" @click="setActive(tab)"
+            :class="['tab-header', tab.active ? 'active' : '']">
+            <font-awesome-icon :icon="tab.icon" />
+            <span>{{ $t(tab.contentLabel) }}</span>
+        </div>
+        <div v-for="tab in tabs" :key="tab.contentLabel">
+            <div v-if="tab.active" class="tab-content">
+                <slot :name="tab.slotName"></slot>
+            </div>
+        </div>
     </div>
 </template>
 <style lang="scss" scoped>
+@import "colors";
 
+.tab-header {
+    display: inline-flex;
+    padding: 3px 5px;
+    min-width: 80px;
+    border-top: solid 1px $border;
+    border-right: solid 1px $border;
+    font-family: monospace;
+    min-width: 150px;
+    color: $tab-color;
+    background: $inactive;
+    padding: 8px 10px;
+    border-left: none;
+
+    ::-moz-selection {
+        background: transparent;
+    }
+
+    ::selection {
+        background: transparent;
+    }
+
+    &:hover {
+        cursor: pointer;
+        background: lighten($inactive, 5%);
+    }
+
+    &.active {
+        background: white;
+        border-bottom: solid 1px white;
+        color: darken($tab-color, 15%);
+    }
+
+    &:first-of-type {
+        border-left: solid 1px $border;
+    }
+
+    >span {
+        text-align: center;
+        width: 100%;
+    }
+}
+
+.tab-content {
+    background: white;
+    padding: 30px 10px;
+    border-left: 1px solid white;
+    border-top: 1px solid white;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 10px;
+    min-height: 600px;
+    background: white;
+}
 </style>
