@@ -1,5 +1,12 @@
 const messages = {
     en: {
+        welcomeMessage: "Welcome to jubalrife.net!",
+        specialThanks: "Special thanks to GitHub Pages, Google Drive, and Font Awesome for providing free tools/services to make this page possible.",
+        socials: {
+            twitter: "Twitter",
+            gitHub: "GitHub",
+            soundCloud: "SoundCloud"
+        },
         about: {
             tab: "About",
             h1: "Hello World: Welcome to my website!",
@@ -12,22 +19,22 @@ const messages = {
             disclaimer: "Please note that this is my personal website (currently graciously hosted by Github via Github Pages) and nothing written here is on behalf of or in connection to my employer."
         },
         blog: {
-            tab: "Blog"
+            tab: "Developer Blog"
         },
         music: {
             tab: "Music"
         },
         resources: {
             tab: "Resources",
-            r1:{
-                p1:"This site is hosted through",
-                link:"GitHub Pages",
-                p2:". You can make one too!"
+            r1: {
+                p1: "This site is hosted through",
+                link: "GitHub Pages",
+                p2: ". You can make one too!"
             },
-            r2:{
-                p1:"Also check out",
-                link:"Bubbly",
-                p2:". A fun tool for making speech bubbles (like the one in my banner)"
+            r2: {
+                p1: "Also check out",
+                link: "Bubbly",
+                p2: ". A fun tool for making speech bubbles (like the one in my banner)"
             }
         },
         console: {

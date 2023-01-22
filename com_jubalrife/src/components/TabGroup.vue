@@ -28,10 +28,12 @@ export default {
 </script>
 <template>
     <div>
-        <div v-for="tab in tabs" :key="tab.contentLabel" @click="setActive(tab)"
-            :class="['tab-header', tab.active ? 'active' : '']">
-            <font-awesome-icon :icon="tab.icon" />
-            <span>{{ $t(tab.contentLabel) }}</span>
+        <div class="headers">
+            <div v-for="tab in tabs" :key="tab.contentLabel" @click="setActive(tab)"
+                :class="['tab-header', tab.active ? 'active' : '']">
+                <font-awesome-icon :icon="tab.icon" />
+                <span>{{ $t(tab.contentLabel) }}</span>
+            </div>
         </div>
         <div v-for="tab in tabs" :key="tab.contentLabel">
             <div v-if="tab.active" class="tab-content">
@@ -43,10 +45,14 @@ export default {
 <style lang="scss" scoped>
 @import "colors";
 
+.headers {
+    width: 100%;
+    display: flex;
+}
+
 .tab-header {
+    font-size: 1.1em;
     display: inline-flex;
-    padding: 3px 5px;
-    min-width: 80px;
     border-top: solid 1px $border;
     border-right: solid 1px $border;
     font-family: monospace;
@@ -55,6 +61,7 @@ export default {
     background: $inactive;
     padding: 8px 10px;
     border-left: none;
+    flex: 1;
 
     ::-moz-selection {
         background: transparent;
@@ -80,7 +87,7 @@ export default {
     }
 
     >span {
-        text-align: center;
+        padding-left: 10px;
         width: 100%;
     }
 }
@@ -92,7 +99,6 @@ export default {
     border-top: 1px solid white;
     overflow-x: hidden;
     overflow-y: auto;
-    padding: 10px;
     min-height: 600px;
     background: white;
 }

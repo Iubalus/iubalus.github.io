@@ -39,17 +39,23 @@ export default {
 </script>
 <template>
   <div class="page">
+    <div class="bar">
+      <div class="welcome">
+        <img :src="'/images/icon.gif'">
+        <span>{{ $t("welcomeMessage") }}</span>
+      </div>
+    </div>
     <tab-group v-model:tabs="tabs">
       <template v-slot:blog>Blog Content Here</template>
       <template v-slot:about>
         <div class="about-me">
-        <h1>{{ $t("about.h1") }}</h1>
-        <p>{{ $t("about.p[0]") }}</p>
-        <p>{{ $t("about.p[1]") }}</p>
-        <p>{{ $t("about.p[2]") }}</p>
-        <p>{{ $t("about.p[3]") }}</p>
-        <span class="disclaimer">{{ $t("about.disclaimer") }}</span>
-      </div>
+          <h1>{{ $t("about.h1") }}</h1>
+          <p>{{ $t("about.p[0]") }}</p>
+          <p>{{ $t("about.p[1]") }}</p>
+          <p>{{ $t("about.p[2]") }}</p>
+          <p>{{ $t("about.p[3]") }}</p>
+          <span class="disclaimer">{{ $t("about.disclaimer") }}</span>
+        </div>
       </template>
       <template v-slot:music>Music Content Here</template>
       <template v-slot:resources>
@@ -72,13 +78,111 @@ export default {
       </template>
       <template v-slot:console>Console Content Here</template>
     </tab-group>
+    <div class="bar">
+      <span class="footnote">{{ $t('specialThanks') }}</span>
+      <div class="social-wrap">
+        <div class="social">
+          <a target="_blank" href="https://twitter.com/JubalRife"><font-awesome-icon icon="fab fa-twitter" />Twitter</a>
+        </div>
+        <div class="social">
+          <a target="_blank" href="https://github.com/Iubalus"><font-awesome-icon icon="fab fa-github" />GitHub</a>
+        </div>
+        <div class="social">
+          <a target="_blank" href="https://soundcloud.com/user-373522736"><font-awesome-icon
+              icon="fab fa-soundcloud" />SoundCloud</a>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 <style lang="scss" scoped>
+@import "common";
+
 .page {
   min-width: 800px;
 
+  table {
+    border-spacing: 0px;
+
+    td {
+      padding: 0;
+    }
+  }
+
+  .offscreen {
+    position: absolute;
+    left: -1000px;
+  }
+
+  .bar {
+    min-height: 186px;
+    padding: 10px;
+    background: $theme;
+    margin-bottom: 0px;
+    margin-top: 10px;
+
+    &:first-of-type {
+      margin-bottom: 10px;
+      margin-top: 0px;
+    }
+  }
+
+  .hidden {
+    display: none !important;
+  }
+
+  .welcome {
+    position: relative;
+    height: 160px;
+    margin-bottom: 10px;
+
+    img {
+      position: absolute;
+      left: 10px;
+      top: 0;
+      height: 160px;
+      padding: 10px;
+      background: white;
+
+      &:hover {
+        cursor: pointer;
+        filter: brightness(120%);
+      }
+    }
+
+    span {
+      font-family: monospace;
+      font-style: italic;
+      position: absolute;
+      top: 115px;
+      left: 177px;
+      font-size: 1.4em;
+      position: relative;
+      background: $bubble-color;
+      border-radius: .4em;
+      padding: 20px;
+
+      &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 0px;
+        height: 0;
+        border: 15px solid transparent;
+        border-right-color: $bubble-color;
+        border-left: 0;
+        border-bottom: 0;
+        margin-top: -3px;
+        margin-left: -14px;
+      }
+    }
+  }
+
   .about-me {
+    max-width: 8.5in;
+    padding: 0.5in 1in;
+
     >h1 {
       font-weight: normal;
       font-family: monospace;
@@ -91,7 +195,101 @@ export default {
 
     .disclaimer {
       margin-top: 1in;
+      display: block;
       font-size: 0.8em;
+    }
+
+    >div {
+      margin-bottom: 10px;
+    }
+  }
+
+  .footnote {
+    padding: 10px 5px;
+    font-size: 0.8em;
+    font-style: italic;
+    color: white;
+  }
+
+  .control-table {
+    width: 100%;
+
+    td+td {
+      padding-left: 10px;
+    }
+  }
+
+  .twitter-feed {
+    padding-top: 35px;
+  }
+
+  @media only screen and (max-width: 1000px) {
+    .twitter-feed {
+      display: none;
+    }
+
+    .welcome {
+      span {
+        display: none;
+      }
+    }
+  }
+
+  .social-wrap {
+    margin-top: 25px;
+    width: 100%;
+
+    .social {
+      display: inline;
+      font-size: 1.3em;
+
+      &+.social {
+        margin-left: 20px;
+      }
+
+      a {
+        svg {
+          padding-right: 5px;
+          color: $social;
+        }
+
+        color:white;
+        text-decoration:none;
+        padding-left:10px;
+      }
+    }
+  }
+
+  .blog-index {
+    padding: 5px 10px;
+    list-style-type: none;
+
+    li {
+      padding: 10px;
+
+      a {
+        text-decoration: none;
+        color: saturate($primary, 50%);
+
+        &:visited {
+          color: darken($primary, 10%);
+        }
+      }
+
+      &:hover {
+        cursor: pointer;
+        background: lighten($primary, 40%);
+      }
+    }
+
+    &:first-of-type {
+      margin-top: 0px;
+    }
+
+    .publish-date {
+      padding-right: 20px;
+      font-size: 0.8em;
+      font-style: italic;
     }
   }
 }
