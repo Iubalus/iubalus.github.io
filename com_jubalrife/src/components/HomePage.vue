@@ -1,13 +1,17 @@
 <script lang="ts">
+import Console from './Console.vue';
 import TabGroup from './TabGroup.vue';
 export default {
   name: "HomePage",
-  components: { TabGroup },
+  components: { TabGroup, Console },
   data() {
     return {
       musicTab: {
         loaded: false,
         html: ""
+      },
+      consoleTab: {
+        active: false
       },
       tabs: [
         {
@@ -120,7 +124,9 @@ export default {
           </li>
         </ul>
       </template>
-      <template v-slot:console></template>
+      <template v-slot:console>
+        <console v-if="consoleTab.active" />
+      </template>
     </tab-group>
     <div class="bar">
       <span class="footnote">{{ $t('specialThanks') }}</span>
