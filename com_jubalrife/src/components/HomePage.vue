@@ -90,12 +90,13 @@ export default {
       </template>
       <template v-slot:about>
         <div class="about-me">
-          <h1>{{ $t("about.h1") }}</h1>
-          <p>{{ $t("about.p[0]") }}</p>
-          <p>{{ $t("about.p[1]") }}</p>
-          <p>{{ $t("about.p[2]") }}</p>
-          <p>{{ $t("about.p[3]") }}</p>
-          <span class="disclaimer">{{ $t("about.disclaimer") }}</span>
+          <h1>{{ $t("about.s1h1") }}</h1>
+          <p
+           v-for="p in $tm('about.s1p')"
+           :key="p"
+          >
+            {{ p }}
+          </p>          
         </div>
       </template>
       <template v-slot:music>
@@ -131,9 +132,6 @@ export default {
     <div class="bar">
       <span class="footnote">{{ $t('specialThanks') }}</span>
       <div class="social-wrap">
-        <div class="social">
-          <a target="_blank" href="https://twitter.com/JubalRife"><font-awesome-icon icon="fab fa-twitter" />Twitter</a>
-        </div>
         <div class="social">
           <a target="_blank" href="https://github.com/Iubalus"><font-awesome-icon icon="fab fa-github" />GitHub</a>
         </div>
@@ -236,18 +234,13 @@ export default {
     >h1 {
       font-weight: normal;
       font-family: monospace;
-      color: #3f3f3f;
+      color:black;
       border-bottom: 1px solid #bbbbbb;
       font-size: 1.5em;
       margin: 0 0 10px 0;
       padding: 0 0 5px 0;
     }
 
-    .disclaimer {
-      margin-top: 1in;
-      display: block;
-      font-size: 0.8em;
-    }
 
     >div {
       margin-bottom: 10px;
@@ -256,9 +249,7 @@ export default {
 
   .footnote {
     padding: 10px 5px;
-    font-size: 0.8em;
-    font-style: italic;
-    color: white;
+    font-style: italic;    
   }
 
   .control-table {
@@ -269,15 +260,8 @@ export default {
     }
   }
 
-  .twitter-feed {
-    padding-top: 35px;
-  }
-
   @media only screen and (max-width: 1000px) {
-    .twitter-feed {
-      display: none;
-    }
-
+    
     .welcome {
       span {
         display: none;
@@ -303,7 +287,7 @@ export default {
           color: $social;
         }
 
-        color:white;
+        color:black;
         text-decoration:none;
         padding-left:10px;
       }
@@ -319,11 +303,6 @@ export default {
 
       a {
         text-decoration: none;
-        color: saturate($primary, 50%);
-
-        &:visited {
-          color: darken($primary, 10%);
-        }
       }
 
       &:hover {

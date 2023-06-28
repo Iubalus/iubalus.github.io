@@ -3,23 +3,22 @@ const messages = {
         welcomeMessage: "Welcome to jubalrife.net!",
         specialThanks: "Special thanks to GitHub Pages, Google Drive, and Font Awesome for providing free tools/services to make this page possible.",
         socials: {
-            twitter: "Twitter",
             gitHub: "GitHub",
             soundCloud: "SoundCloud"
         },
         about: {
             tab: "About",
-            h1: "Hello World: Welcome to my website!",
-            p: [
-                "My name is Jubal Rife. I am a Software Developer in Billings Montana.",
-                "I graduated from Rocky Mountain College in 2014 with a Bachelor's degree of Computer Science. I have been working as a full-stack developer since then.",
-                "When I'm not working on software, I like to make music, read, sketch, occasionally even do creative writing. (As well as many other less-bragworthy forms of entertainment)",
-                "Thanks for dropping by. I hope you find something of interest here."
-            ],
-            disclaimer: "Please note that this is my personal website (currently graciously hosted by Github via Github Pages) and nothing written here is on behalf of or in connection to my employer."
+            s1h1: "Hello World!",
+            s1p: [
+                "My name is Jubal Rife. I'm a Software developer with over nine years of experience working in a small but exceptional team to develop and maintain a full stack application and suite of services including many inter-company service solutions.",
+                "I have worked for the same company for the majority of my career. Over the course of this work I have advanced from a junior developer to a staff engineer position. I have worked with many different technologies and have a wide set of responsibilities including dev-ops, development, mentorship, architecture design, and project management.",
+                "I am a lifelong learner and toolbuilder. I seek out technologies, ideas, and practices that I am not familiar with to improve my knowledge and skills. I am always working towards greater personal effectiveness, mentorship, and leadership. While being employed by the same company for a long period of time has many benefits, it can lead to knowledge blind-spots, reliance on in-house tooling, and habitual decision making (company status-quo). I hope to resist these natural forces by staying curious, staying aware, and learning new things through study and practice.",
+                "I may not (or in some cases cannot) share all of my learning experiences on this site, but I plan to use this as one of my tools for both learning and sharing what I have learned.",
+                "Thanks for visiting!"
+            ]
         },
         blog: {
-            tab: "Developer Blog"
+            tab: "Blog"
         },
         music: {
             tab: "Music"

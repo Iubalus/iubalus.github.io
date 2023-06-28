@@ -60,7 +60,7 @@ export default {
     border-right: solid 1px $border;
     font-family: monospace;
     min-width: 150px;
-    color: $tab-color;
+    color: black;
     background: $inactive;
     padding: 8px 10px;
     border-left: none;
@@ -82,7 +82,7 @@ export default {
     &.active {
         background: white;
         border-bottom: solid 1px white;
-        color: darken($tab-color, 15%);
+        color: black;
     }
 
     &:first-of-type {
