@@ -1,0 +1,73 @@
+* {
+    --primary-color: #B9BAC0;
+    --primary-color-light: #BEBFC5;
+    --theme-color: var(--primary-color);
+    --inactive-color: #cdcdcd;
+    --inactive-color-light:#CACACA;
+    --border-color: #acacac;
+    --bubble-color: #eaeaea;
+    --social-color: black;
+}
+
+.headers {
+    width: 100%;
+    display: flex;
+}
+
+.tab-header {
+    font-size: 1.1em;
+    display: inline-flex;
+    border-top: solid 1px var(--border-color);
+    border-right: solid 1px var(--border-color);
+    font-family: monospace;
+    min-width: 150px;
+    color: black;
+    background: var(--inactive-color);
+    padding: 8px 10px;
+    border-left: none;
+    flex: 1;   
+}
+
+.tab-header::-moz-selection {
+    background: transparent;
+}
+
+.tab-header::selection {
+    background: transparent;
+}
+
+.tab-header:hover {
+    cursor: pointer;
+    background: var(--incative-color-light);
+}
+
+.tab-header.active {
+    background: white;
+    border-bottom: solid 1px white;
+    color: black;
+}
+
+.tab-header:first-of-type {
+    border-left: solid 1px var(--border-color);
+}
+
+.tab-header > span {
+    padding-left: 10px;
+    width: 100%;
+}
+
+.tab-content {
+    display: none;
+    background: white;
+    padding: 30px 10px;
+    border-left: 1px solid white;
+    border-top: 1px solid white;
+    overflow-x: hidden;
+    overflow-y: auto;
+    min-height: 600px;
+    background: white;
+}
+
+.tab-content.active {
+    display:block;
+}
