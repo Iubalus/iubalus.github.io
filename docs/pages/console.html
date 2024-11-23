@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../styles/console.css">
-    <script type="application/javascript" src="../scripts/jquery-3.3.1.min.js"></script>
-    <script type="application/javascript" src="../scripts/JBLConsole.js"></script>
 </head>
 <body>
 <div data-console class="console">
+    <span contenteditable="true" data-console-focus class="offscreen"></span>
     <div class="line-overlay"></div>
     <div class="console-text">
         JBLv0.8<br>
@@ -16,6 +15,7 @@
         <span class="blinky-boi">&#8248;</span>
         <div class="offscreen" data-console-execute-wrap></div>
     </div>
+    <script type="application/javascript" src="../scripts/JBLConsole.js"></script>
 </div>
 </body>
 </html>
