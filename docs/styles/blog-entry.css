@@ -15,11 +15,14 @@ body {
   margin-top: 5px;
   font-size: 1.05em;
 }
+
 .entry .topic-wrap {
   min-height: 40px;
   position: relative;
 }
-.entry .topic-wrap h2, .entry .topic-wrap h3 {
+
+.entry .topic-wrap h2,
+.entry .topic-wrap h3 {
   position: absolute;
   margin: 0;
   top: 0;
@@ -29,6 +32,7 @@ body {
   padding-top: 10px;
   padding-bottom: 10px;
 }
+
 .entry .topic-wrap h2 {
   padding: 10px;
   background: #d3d4d7;
@@ -36,6 +40,7 @@ body {
   width: 20%;
   border-radius: 3px 0 0 3px;
 }
+
 .entry .topic-wrap h3 {
   padding: 10px;
   background: #c6c7cb;
@@ -44,6 +49,7 @@ body {
   border-left: 1px solid white;
   border-radius: 0 3px 3px 0;
 }
+
 .entry .publish-meta {
   display: block;
   text-align: right;
@@ -51,31 +57,42 @@ body {
   font-style: italic;
   font-size: 0.7em;
 }
+
 .entry .entry-content {
   margin-bottom: 1in;
   padding: 10px 1in;
   line-height: 1.5;
 }
+
 .entry .entry-content h4 {
   font-size: 1.1em;
   color: #1a1a1a;
   font-weight: normal;
 }
+
 .entry .entry-content h5 {
   padding-left: 10px;
   font-weight: normal;
 }
+
 .entry .entry-content p {
   margin: 10px 0;
   padding: 0 10px;
 }
+
 .entry .entry-content li p {
   margin: 10px 0;
   padding: 0;
 }
+
 .entry .entry-content .quote {
   font-style: italic;
   padding: 5px 0 5px 40px;
   margin: 0px;
 }
 
+@media only screen and (max-width: 1000px) {
+  .entry .entry-content {
+    padding: 10px 20px;
+  }
+}

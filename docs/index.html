@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>jubalrife.com</title>
 	<link rel="stylesheet" href="./styles/index.css">
 </head>
+
 <body>
 	<div class="page">
 		<div class="bar">
@@ -42,10 +44,10 @@
 						Topic 3 - Coding Healthy
 					</a>
 				</li>
-				<li>
+				<li>					
 					<a href="./pages/blog-entries/20180708.html" rel="noopener" target="_blank">
 						<span class="publish-date">2018.07.08</span>
-						Topic 2 - Recovering From Mistakes</a>
+						Topic 2 - Recovering From Mistakes</a>					
 				</li>
 				<li>
 					<a href="./pages/blog-entries/20180317.html" rel="noopener" target="_blank">
@@ -54,49 +56,22 @@
 					</a>
 				</li>
 			</ul>
-			<ul>
-				<li>
-					This site is hosted through
-					<a href="https://pages.github.com/">
-						GitHub Pages
-					</a>
-					You can make one too!
-				</li>
-				<li>
-					Also check out
-					<a href="https://projects.verou.me/bubbly/">
-						Bubbly
-					</a>
-					A fun tool for making speech bubbles (like the one in my banner)
-				</li>
-				<li>
-					Useful guide for making old console css
-					<a href="https://css-tricks.com/old-timey-terminal-styling/">Old Timey Terminal Styling</a>
-
-				</li>
-			</ul>
-			<div id="music-content">
-				<span class="easy-listening">Listen To My Music</span>
-			</div>
-			<div id="console-button">Console</div>
 		</div>
-		<div class="bar">
-			<div class="social-wrap">
-				<div class="social">
-					<a target="_blank" href="https://github.com/Iubalus">GitHub</a>
-				</div>
-				<div class="social">
-					<a target="_blank" href="https://soundcloud.com/user-373522736">SoundCloud</a>
-				</div>
-			</div>
+		<div id="music-content">			
+		</div>		
+		<div class="action-wrap">
+			<a class="action-wrap-item" target="_blank" href="https://github.com/Iubalus">GitHub</a>
+			<a class="action-wrap-item" target="_blank" href="https://soundcloud.com/user-373522736">SoundCloud</a>
+			<span id="console-button" class="action-wrap-item">Command Line</span>
+			<span id="music-listen" class="action-wrap-item">Listen To My Music</span>	
 		</div>
 	</div>
 	<script>
 		let musicLoaded = false;
 
-		document.getElementById("music-content").addEventListener("click", function (e) {
+		document.getElementById("music-listen").addEventListener("click", function (e) {
 			if (!musicLoaded) {
-				e.target.innerHTML = '<iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/477779040&color=%23dcd4d0&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>';
+				document.getElementById("music-content").innerHTML = '<iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/477779040&color=%23dcd4d0&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>';
 				musicLoaded = true;
 			}
 		})
