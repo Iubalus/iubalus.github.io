@@ -8,8 +8,9 @@
     --social-color: black;
 }
 
-body {
-    background: var(--primary-color-light);
+
+body {    
+    background:#eaeaea;
 }
 
 .page {
@@ -183,4 +184,17 @@ table td {
     padding-right: 20px;
     font-size: 0.8em;
     font-style: italic;
+}
+
+.easy-listening {
+    padding: 8px 14px;
+    border-radius: 25px;
+    background: #707570;
+    color: white;
+    font-size: 20px;
+}
+
+.easy-listening:hover {
+    background:#a0a1a0;    
+    cursor:pointer;
 }
