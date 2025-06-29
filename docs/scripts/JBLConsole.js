@@ -3,6 +3,9 @@ let dataOut = document.querySelector("[data-command-out]");
 let dataIn = document.querySelector("[data-command-in]");
 let executionWrap = document.querySelector("[data-console-execute-wrap]");
 let focusAnchor = document.querySelector("[data-console-focus]");
+let redBlink = document.getElementById("#blink-red")
+let greenBlink = document.getElementById("#blink-green")
+let power = document.getElementById("#power-button");
 
 var consoleBuffer = [];
 var renderSize = 20;
@@ -52,7 +55,7 @@ var commands = {
                 consolePrintln(":)");
                 if (i > 100) {
                     consolePrintln("Okay that's too many smiles...")
-                    setTimeout(()=>{
+                    setTimeout(() => {
                         consolePrintln("Alright maybe one more")
                         consolePrintln(":)")
                     }, 1000)
@@ -87,6 +90,9 @@ target.addEventListener("click", function () {
 });
 
 focusAnchor.addEventListener("keydown", function (event) {
+    if (!greenBlink.classList.contains("on")) {
+        greenBlink.classList.toggle("on")
+    }
     for (var i = 0; i < ignoredKeys.length; i++) {
         if (event.keyCode == ignoredKeys[i]) {
             return;
@@ -147,5 +153,23 @@ focusAnchor.addEventListener("keydown", function (event) {
     }
 });
 
-focusAnchor.focus();
+power.addEventListener("click", ()=>{
+    window.location.href="../index.html";
+});
 
+function blink(elt, onTime, offTime) {
+    let t = setTimeout(
+        () => {
+            elt.classList.toggle("on");
+            clearTimeout(t);
+            blink(elt, onTime, offTime);
+        },
+        Math.random() * (elt.classList.contains("on") ? onTime : offTime)
+    )
+}
+
+blink(redBlink, 100000, 200000);
+blink(greenBlink, 500, 3000);
+
+
+focusAnchor.focus();

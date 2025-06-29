@@ -1,21 +1,60 @@
 <!DOCTYPE HTML>
 <html>
+
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../styles/console.css">
+    <link
+        rel="stylesheet"
+        href="../styles/console.css"
+    >
 </head>
+
 <body>
-<div data-console class="console">
-    <span contenteditable="true" data-console-focus class="offscreen"></span>
-    <div class="line-overlay"></div>
-    <div class="console-text">
-        JBLv0.8<br>
-        <div data-command-out></div>
-        <span data-command-in class="command-in"></span>
-        <span class="blinky-boi">&#8248;</span>
-        <div class="offscreen" data-console-execute-wrap></div>
+    <div class="pretend-computer">
+        <div class="monitor-border">
+            <div
+                data-console
+                class="console"
+            >
+                <span
+                    contenteditable="true"
+                    data-console-focus
+                    class="offscreen"
+                ></span>
+                <div class="line-overlay"></div>
+                <div class="console-text">
+                    JBLv0.8<br>
+                    <div data-command-out></div>
+                    <span
+                        data-command-in
+                        class="command-in"
+                    ></span>
+                    <span class="blinky-boi">&#8248;</span>
+                    <div
+                        class="offscreen"
+                        data-console-execute-wrap
+                    ></div>
+                </div>
+            </div>
+        </div>
+        <div class="display-flair">
+            <span
+                id="#blink-red"
+                class="blinky-red"
+            ></span>
+            <span
+                id="#blink-green"
+                class="blinky-green"
+            ></span>
+            <span class="floppy"></span>
+            <span class="spacer"></span>
+            <span id="#power-button" class="power">&#9211;</span>
+        </div>
     </div>
-    <script type="application/javascript" src="../scripts/JBLConsole.js"></script>
-</div>
+    <script
+        type="application/javascript"
+        src="../scripts/JBLConsole.js"
+    ></script>
 </body>
+
 </html>
