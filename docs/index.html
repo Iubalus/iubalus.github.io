@@ -19,7 +19,7 @@
 		<div>
 			<div class="about-me">
 				<h1>Hello World!</h1>
-				<p>My name is Jubal Rife. I'm a Software developer with over nine years of experience working in a
+				<p>My name is Jubal Rife. I'm a Software developer with over <span id="exp-years">11</span> years of experience working in a
 					small but exceptional team to develop and maintain a full stack application and suite of
 					services including many inter-company service solutions.</p>
 				<p>I have worked for the same company for the majority of my career. Over the course of this work I
@@ -78,6 +78,8 @@
 		document.getElementById("console-button").addEventListener("click", function (event) {
 			window.open('./pages/console.html', 'Console', 'width=920,height=770');
 		})
+		let yearElt = document.getElementById("exp-years");
+		yearElt.innerText = Math.floor((new Date() - new Date('2014-03-04'))/1000/60/60/24/365)
 	</script>
 </body>
 
